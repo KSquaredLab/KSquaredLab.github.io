@@ -268,7 +268,12 @@ const createResearchCard = (theme) => {
   }
 
   const body = createElement("div", "research-theme-body");
-  body.appendChild(createElement("h3", "", theme.title || "Research Theme"));
+  const titleGroup = createElement("div", "research-theme-title-group");
+  titleGroup.appendChild(createElement("h3", "", theme.title || "Research Theme"));
+  if (theme.titleKo) {
+    titleGroup.appendChild(createElement("div", "research-theme-title-ko", theme.titleKo));
+  }
+  body.appendChild(titleGroup);
 
   const descriptions = Array.isArray(theme.description) ? theme.description : [theme.description];
   descriptions

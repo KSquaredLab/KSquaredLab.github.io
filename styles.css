@@ -441,10 +441,22 @@ ol {
   padding: 1.1rem 1.15rem 1.2rem;
 }
 
+.research-theme-title-group {
+  display: grid;
+  gap: 0.28rem;
+}
+
 .research-theme-body h3 {
   margin-bottom: 0;
   color: var(--navy);
   font-size: 1.12rem;
+}
+
+.research-theme-title-ko {
+  color: var(--navy-2);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
 }
 
 .research-theme-body p {

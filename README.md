@@ -60,11 +60,12 @@ The Research section is rendered from `research.json`.
 To update a research theme:
 
 1. Edit the theme object in `research.json`.
-2. Keep `title` short and use 2-3 concise `description` sentences.
-3. Add a thumbnail image path in `image`, usually from `images/research/` or `images/hero/`.
-4. Use descriptive `alt` text for the thumbnail.
-5. Optional: add `imageFit` as `cover` or `contain`, and `imagePosition` such as `center` or `center top`, when a thumbnail needs careful cropping.
-6. Add short `relatedWork` labels. Add a `url` only when there is a reliable DOI, PubMed, Google Scholar, publication, or project link.
+2. Keep `title` short, and add `titleKo` when a Korean topic label should appear below the English title.
+3. Use 2-3 concise `description` sentences.
+4. Add a thumbnail image path in `image`, usually from `images/research/` or `images/hero/`.
+5. Use descriptive `alt` text for the thumbnail.
+6. Optional: add `imageFit` as `cover` or `contain`, and `imagePosition` such as `center` or `center top`, when a thumbnail needs careful cropping.
+7. Add short `relatedWork` labels. Add a `url` only when there is a reliable DOI, PubMed, Google Scholar, publication, or project link.
 
 To replace a research thumbnail:
 
@@ -77,7 +78,7 @@ To replace a research thumbnail:
 To add a new research theme:
 
 1. Add a new object to `research.json`.
-2. Include `title`, `description`, `image`, `alt`, and `relatedWork`.
+2. Include `title`, optional `titleKo`, `description`, `image`, `alt`, and `relatedWork`.
 3. Keep the Research section concise; full citations belong in the Publications section.
 
 Example related work item:
