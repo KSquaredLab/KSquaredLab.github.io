@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Conference Presentation",
+    "date": "2026",
+    "caption": "Lab members presenting research at an academic conference.",
+    "image": "images/gallery/conference-presentation.jpg",
+    "alt": "Lab member presenting research at a conference"
+  },
+  {
+    "title": "Research Discussion",
+    "date": "2026",
+    "caption": "Group discussion on statistical modeling and biomedical data analysis.",
+    "image": "images/gallery/research-discussion.jpg",
+    "alt": "Lab members discussing research"
+  },
+  {
+    "title": "Lab Meeting",
+    "date": "2026",
+    "caption": "Regular lab meeting for project updates and research feedback.",
+    "image": "images/gallery/lab-meeting.jpg",
+    "alt": "Lab meeting discussion"
+  },
+  {
+    "title": "Student Presentation",
+    "date": "2026",
+    "caption": "Students share progress on ongoing research projects.",
+    "image": "images/gallery/student-presentation.jpg",
+    "alt": "Student research presentation"
+  }
+]

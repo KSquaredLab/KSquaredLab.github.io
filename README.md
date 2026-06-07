@@ -8,12 +8,14 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 
 - `index.html` edits the main website sections and text.
 - `styles.css` edits the layout, colors, typography, and responsive design.
-- `script.js` loads and renders the People section from the `people/` folder.
+- `script.js` loads and renders the People and Lab Life sections from JSON files.
+- `people.json` is the primary data file for the People section.
 - `people/index.json` controls the order and group placement of lab member profiles.
 - `people/[person-name]/profile.json` stores each member's name, role, department, interests, bio, email field, and optional photo path.
 - `people/[person-name]/` can also store that member's profile photo.
-- `people.json` is kept only as a legacy fallback file.
 - `people/kangjin-kim/kangjin-kim.jpg` is the current PI profile photo used by the People section.
+- `gallery.json` stores Lab Life gallery entries.
+- `images/gallery/` stores Lab Life photos.
 - `images/research/` stores web-ready figure excerpts used in the Home and Research sections.
 - `papers/` is a local source folder for manuscript PDFs and is ignored by Git.
 
@@ -39,6 +41,7 @@ Common sections to update:
 - Home: edit the `#home` section.
 - Research: edit the `#research` section.
 - Publications: edit the `#publications` section.
+- Lab Life: edit `gallery.json` and add photos to `images/gallery/`.
 - Join Us: edit the `#join` section.
 - News: edit the `#news` section.
 - Contact: edit the `#contact` section.
@@ -134,7 +137,36 @@ Example:
 
 If `photo` is empty or the image path is incorrect, the website will show a simple placeholder avatar instead of a broken image.
 
-## 7. Information That Should Not Be Uploaded
+## 7. How to Add Lab Life Photos
+
+The Lab Life section is rendered from `gallery.json`. To add a new photo:
+
+1. Add a photo file to `images/gallery/`.
+2. Use a simple lowercase filename with hyphens, such as `conference-presentation-2026.jpg`.
+3. Add a new entry to `gallery.json` with `title`, `date`, `caption`, `image`, and `alt`.
+4. Commit and push changes.
+5. Avoid uploading private, embarrassing, or low-quality photos.
+6. Confirm that people in the photo are comfortable with the photo being posted on the public lab website.
+
+Example `gallery.json` entry:
+
+```json
+{
+  "title": "Conference Presentation",
+  "date": "2026",
+  "caption": "Lab members presenting research at an academic conference.",
+  "image": "images/gallery/conference-presentation-2026.jpg",
+  "alt": "Lab member presenting research at a conference"
+}
+```
+
+If the image path is missing or incorrect, the website shows a simple placeholder card instead of a broken image. To hide the Lab Life section temporarily, set `gallery.json` to an empty array:
+
+```json
+[]
+```
+
+## 8. Information That Should Not Be Uploaded
 
 Do not upload private personal information, including:
 
@@ -147,13 +179,16 @@ Do not upload private personal information, including:
 - Sensitive health information
 - Full CV files that contain references, private contact details, or other information that has not been checked for public sharing
 - Full manuscript PDFs in `papers/`, unless copyright and public sharing rights have been checked
+- Private, embarrassing, low-quality, or unapproved gallery photos
 - Any private information that a student has not explicitly agreed to publish
 
 For students, do not add email addresses unless the student has agreed to make the email public. It is fine to leave the `email` field blank.
 
+Before uploading photos of students or collaborators, confirm that the people shown are comfortable with the photo being posted publicly on the lab website. Do not upload student ID cards, private documents, phone numbers, birth dates, or sensitive personal information.
+
 ## Local Preview
 
-Because the People section loads `people.json`, preview the site with a local web server instead of opening `index.html` directly.
+Because the People and Lab Life sections load JSON files, preview the site with a local web server instead of opening `index.html` directly.
 
 From the repository folder, run:
 

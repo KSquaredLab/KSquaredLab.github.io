@@ -1,4 +1,5 @@
 const peopleContainer = document.querySelector("#people-content");
+const galleryContainer = document.querySelector("#gallery-content");
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -176,4 +177,67 @@ if (peopleContainer) {
   loadPeople()
     .then(renderPeople)
     .catch(renderPeopleError);
+}
+
+const createGalleryPlaceholder = (item) => {
+  const placeholder = createElement("div", "gallery-placeholder");
+  placeholder.setAttribute("role", "img");
+  placeholder.setAttribute("aria-label", item.alt || item.title || "Gallery image placeholder");
+  placeholder.appendChild(createElement("span", "gallery-placeholder-label", item.title || "Lab Life"));
+  return placeholder;
+};
+
+const createGalleryCard = (item) => {
+  const card = createElement("article", "gallery-card");
+  const media = createElement("div", "gallery-media");
+
+  const placeholder = createGalleryPlaceholder(item);
+  media.appendChild(placeholder);
+
+  if (item.image) {
+    const image = document.createElement("img");
+    image.alt = item.alt || item.title || "Lab activity photo";
+    image.loading = "lazy";
+    image.onload = () => {
+      if (image.naturalWidth > 0 && placeholder.isConnected) {
+        placeholder.replaceWith(image);
+      }
+    };
+    image.src = item.image;
+  }
+
+  const body = createElement("div", "gallery-card-body");
+  const meta = [item.date].filter(Boolean).join(" · ");
+
+  body.appendChild(createElement("h3", "", item.title || "Lab Life"));
+  if (meta) body.appendChild(createElement("div", "gallery-date", meta));
+  if (item.caption) body.appendChild(createElement("p", "", item.caption));
+
+  card.appendChild(media);
+  card.appendChild(body);
+  return card;
+};
+
+const renderGallery = (items) => {
+  const section = document.querySelector("#lab-life");
+  const visibleItems = Array.isArray(items) ? items.filter((item) => item && item.title) : [];
+
+  if (!visibleItems.length) {
+    if (section) section.hidden = true;
+    return;
+  }
+
+  galleryContainer.innerHTML = "";
+  visibleItems.forEach((item) => galleryContainer.appendChild(createGalleryCard(item)));
+};
+
+const renderGalleryError = () => {
+  const section = document.querySelector("#lab-life");
+  if (section) section.hidden = true;
+};
+
+if (galleryContainer) {
+  fetchJson("./gallery.json")
+    .then(renderGallery)
+    .catch(renderGalleryError);
 }

@@ -642,6 +642,78 @@ ol {
   color: var(--muted);
 }
 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gallery-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.05);
+}
+
+.gallery-media {
+  aspect-ratio: 4 / 3;
+  background: var(--soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-media img,
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-media img {
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  color: var(--navy);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    linear-gradient(rgba(11, 31, 58, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 31, 58, 0.08) 1px, transparent 1px);
+  background-size: auto, 26px 26px, 26px 26px;
+  text-align: center;
+}
+
+.gallery-placeholder-label {
+  max-width: 12rem;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.gallery-card-body {
+  padding: 1rem 1.05rem 1.1rem;
+}
+
+.gallery-card-body h3 {
+  margin-bottom: 0.35rem;
+}
+
+.gallery-date {
+  margin-bottom: 0.45rem;
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.gallery-card-body p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .join-section {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.86);
@@ -834,6 +906,7 @@ ol {
 
   .research-grid,
   .research-snapshots,
+  .gallery-grid,
   .people-grid,
   .expertise-list,
   .two-column {
