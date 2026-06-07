@@ -5,8 +5,7 @@ const projectsContainer = document.querySelector("#projects-content");
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
   { key: "graduateStudents", title: "Graduate Students" },
-  { key: "undergraduateResearchers", title: "Undergraduate Researchers" },
-  { key: "alumni", title: "Alumni" }
+  { key: "undergraduateResearchers", title: "Undergraduate Researchers" }
 ];
 
 const createElement = (tag, className, text) => {
@@ -131,7 +130,7 @@ const renderPeopleGroup = ({ key, title, people }) => {
   section.appendChild(createElement("h3", "", title));
 
   if (!people.length) {
-    section.appendChild(createElement("p", "empty-note", key === "alumni" ? "No alumni listed yet." : "No members listed yet."));
+    section.appendChild(createElement("p", "empty-note", "No members listed yet."));
     return section;
   }
 

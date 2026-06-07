@@ -42,11 +42,10 @@ Common sections to update:
 
 - Home: edit the `#home` section.
 - Research: edit the `#research` section.
-- Projects: edit `projects.json`.
+- Funded Projects: edit `projects.json`.
 - Publications: edit the `#publications` section.
 - Lab Life: edit `gallery.json` and add photos to `images/gallery/`.
 - For Students: edit the `#students` section.
-- News: edit the `#news` section.
 - Contact: edit the `#contact` section.
 
 The publication list is currently written directly in the `#publications` section of `index.html`. To add a new publication, add a new `<li>` item inside the relevant `citation-list`.

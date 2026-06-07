@@ -934,28 +934,6 @@ ol {
   margin-bottom: 0;
 }
 
-.news-list {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.news-item {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.news-item time {
-  color: var(--teal);
-  font-weight: 800;
-}
-
-.news-item p {
-  margin-bottom: 0;
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
@@ -1132,7 +1110,6 @@ ol {
     width: min(220px, 100%);
   }
 
-  .news-item,
   .contact-card dl div {
     grid-template-columns: 1fr;
     gap: 0.25rem;
