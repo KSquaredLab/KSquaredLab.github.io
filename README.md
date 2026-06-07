@@ -14,6 +14,8 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 - `people/[person-name]/` can also store that member's profile photo.
 - `people.json` is kept only as a legacy fallback file.
 - `people/kangjin-kim/kangjin-kim.jpg` is the current PI profile photo used by the People section.
+- `images/research/` stores web-ready figure excerpts used in the Home and Research sections.
+- `papers/` is a local source folder for manuscript PDFs and is ignored by Git.
 
 ## 1. How to Enable GitHub Pages
 
@@ -144,6 +146,7 @@ Do not upload private personal information, including:
 - Private family information
 - Sensitive health information
 - Full CV files that contain references, private contact details, or other information that has not been checked for public sharing
+- Full manuscript PDFs in `papers/`, unless copyright and public sharing rights have been checked
 - Any private information that a student has not explicitly agreed to publish
 
 For students, do not add email addresses unless the student has agreed to make the email public. It is fine to leave the `email` field blank.
