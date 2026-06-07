@@ -52,8 +52,8 @@
       "We develop and evaluate prediction models for biomedical and clinical outcomes.",
       "The lab is interested in survival prediction, interpretable machine learning, and robust validation of AI-based biomedical models."
     ],
-    "image": "images/research/microbiome-method-plot.jpg",
-    "alt": "Tree-based microbiome method figure with model diagnostics",
+    "image": "images/research/prediction-modeling-workflow.svg",
+    "alt": "Schematic workflow for biomedical AI prediction modeling and validation",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
@@ -68,9 +68,9 @@
       "We apply statistical and data science methods to environmental health and policy-related problems.",
       "This includes study design, survey analysis, sampling strategy, and quantitative evaluation of stakeholder perceptions and policy feasibility."
     ],
-    "image": "images/research/microbiome-composition.jpg",
-    "alt": "Colorful composition plot from biomedical and environmental data analysis",
-    "imageFit": "cover",
+    "image": "images/research/environmental-policy-workflow.svg",
+    "alt": "Schematic workflow for environmental health survey analysis and policy evaluation",
+    "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
       {

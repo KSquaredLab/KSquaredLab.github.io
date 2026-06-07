@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Environmental health and policy evaluation workflow</title>
+  <desc id="desc">A clean workflow for survey design, environmental exposure data, statistical analysis, and policy evaluation.</desc>
+  <defs>
+    <linearGradient id="soft-bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#f3f8f5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0b1f3a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" rx="28" fill="url(#soft-bg)"/>
+  <g opacity="0.42" stroke="#d9e3ea" stroke-width="1">
+    <path d="M90 118H1110M90 218H1110M90 318H1110M90 418H1110M90 518H1110"/>
+    <path d="M160 74V586M320 74V586M480 74V586M640 74V586M800 74V586M960 74V586"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="92" y="82" fill="#0b1f3a" font-size="31" font-weight="800">Environmental health data science</text>
+    <text x="92" y="119" fill="#64748b" font-size="20">Survey design, exposure data, and policy evaluation</text>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif">
+    <rect x="78" y="190" width="250" height="320" rx="24" fill="#ffffff" stroke="#d9e3ea" stroke-width="2"/>
+    <text x="112" y="244" fill="#0b1f3a" font-size="25" font-weight="850">Study inputs</text>
+
+    <g transform="translate(112 280)">
+      <rect x="0" y="0" width="176" height="48" rx="14" fill="#eef7f5" stroke="#b8d9d4" stroke-width="2"/>
+      <circle cx="27" cy="24" r="12" fill="#0f766e"/>
+      <path d="M21 24h12M27 18v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="52" y="30" fill="#0b1f3a" font-size="18" font-weight="800">Survey data</text>
+    </g>
+
+    <g transform="translate(112 352)">
+      <rect x="0" y="0" width="176" height="48" rx="14" fill="#fff8eb" stroke="#ead6a7" stroke-width="2"/>
+      <circle cx="27" cy="24" r="12" fill="#b7791f"/>
+      <path d="M19 29c10-18 20-18 30 0" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="52" y="30" fill="#0b1f3a" font-size="18" font-weight="800">Exposure</text>
+    </g>
+
+    <g transform="translate(112 424)">
+      <rect x="0" y="0" width="176" height="48" rx="14" fill="#f8fafc" stroke="#d9e3ea" stroke-width="2"/>
+      <circle cx="27" cy="24" r="12" fill="#123c69"/>
+      <path d="M20 24h28M24 17h8M36 31h8" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="52" y="30" fill="#0b1f3a" font-size="18" font-weight="800">Sampling</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#8aa0b6" stroke-width="4" stroke-linecap="round">
+    <path d="M328 350H422"/>
+    <path d="M418 350l-16-13M418 350l-16 13"/>
+    <path d="M768 350H860"/>
+    <path d="M856 350l-16-13M856 350l-16 13"/>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif">
+    <rect x="422" y="184" width="346" height="332" rx="24" fill="#ffffff" stroke="#d9e3ea" stroke-width="2"/>
+    <text x="462" y="238" fill="#0b1f3a" font-size="25" font-weight="850">Statistical analysis</text>
+    <text x="462" y="270" fill="#64748b" font-size="17">quantitative evidence for decisions</text>
+
+    <g transform="translate(466 318)">
+      <path d="M0 154H252M0 34V154" stroke="#d9e3ea" stroke-width="3" stroke-linecap="round"/>
+      <rect x="28" y="86" width="28" height="68" rx="5" fill="#0f766e"/>
+      <rect x="68" y="62" width="28" height="92" rx="5" fill="#123c69"/>
+      <rect x="108" y="100" width="28" height="54" rx="5" fill="#b7791f"/>
+      <rect x="168" y="48" width="28" height="106" rx="5" fill="#0f766e"/>
+      <rect x="208" y="72" width="28" height="82" rx="5" fill="#123c69"/>
+      <path d="M28 58C78 24 126 74 170 42C195 24 218 30 242 18" fill="none" stroke="#b7791f" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="28" cy="58" r="6" fill="#b7791f"/>
+      <circle cx="170" cy="42" r="6" fill="#b7791f"/>
+      <circle cx="242" cy="18" r="6" fill="#b7791f"/>
+    </g>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif">
+    <rect x="860" y="190" width="278" height="320" rx="24" fill="#ffffff" stroke="#d9e3ea" stroke-width="2"/>
+    <text x="898" y="244" fill="#0b1f3a" font-size="25" font-weight="850">Policy evaluation</text>
+    <text x="898" y="276" fill="#64748b" font-size="17">criteria, feasibility, impact</text>
+
+    <g transform="translate(902 322)">
+      <rect x="0" y="0" width="194" height="42" rx="13" fill="#eef7f5"/>
+      <circle cx="23" cy="21" r="12" fill="#0f766e"/>
+      <path d="M17 21l5 5l11-13" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="27" fill="#0b1f3a" font-size="17" font-weight="800">Stakeholders</text>
+
+      <rect x="0" y="66" width="194" height="42" rx="13" fill="#fff8eb"/>
+      <circle cx="23" cy="87" r="12" fill="#b7791f"/>
+      <path d="M16 87h14M23 80v14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="50" y="93" fill="#0b1f3a" font-size="17" font-weight="800">Certification</text>
+
+      <rect x="0" y="132" width="194" height="42" rx="13" fill="#f8fafc"/>
+      <circle cx="23" cy="153" r="12" fill="#123c69"/>
+      <path d="M16 153h28" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      <text x="50" y="159" fill="#0b1f3a" font-size="17" font-weight="800">Implementation</text>
+    </g>
+  </g>
+</svg>
