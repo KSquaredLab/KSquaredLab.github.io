@@ -194,7 +194,7 @@ ol {
       rgba(255, 255, 255, 0.62) 71%,
       rgba(255, 255, 255, 0.16) 100%
     ),
-    url("images/research/hero-research-mosaic.jpg");
+    url("images/hero/homepage-visual-panels.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -893,7 +893,7 @@ ol {
         rgba(255, 255, 255, 0.94) 64%,
         rgba(255, 255, 255, 0.78) 100%
       ),
-      url("images/research/hero-research-mosaic.jpg");
+      url("images/hero/homepage-visual-panels.jpg");
     background-position: center right;
     background-size: cover;
   }

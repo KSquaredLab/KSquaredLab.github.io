@@ -16,7 +16,8 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 - `people/kangjin-kim/kangjin-kim.jpg` is the current PI profile photo used by the People section.
 - `gallery.json` stores Lab Life gallery entries.
 - `images/gallery/` stores Lab Life photos.
-- `images/research/` stores web-ready figure excerpts used in the Home and Research sections.
+- `images/hero/` stores the homepage visual panel images and composed hero background.
+- `images/research/` stores web-ready figure excerpts used in the Research section.
 - `papers/` is a local source folder for manuscript PDFs and is ignored by Git.
 
 ## 1. How to Enable GitHub Pages
@@ -50,7 +51,21 @@ The publication list is currently written directly in the `#publications` sectio
 
 After editing, commit and push the changes to GitHub. GitHub Pages will update automatically after deployment finishes.
 
-## 3. How to Edit a Member Profile
+## 3. How to Replace Homepage Visual Panels
+
+Homepage visual images are stored in `images/hero/`.
+
+To replace them:
+
+1. Add or replace a homepage-ready image in `images/hero/`.
+2. Use a descriptive lowercase filename with hyphens, such as `copd-imaging-panel.jpg`.
+3. If replacing the composed hero background, update `images/hero/homepage-visual-panels.jpg`.
+4. If changing the CSS path, update the `.hero` background image in `styles.css`.
+5. Keep images clean, high-resolution, light enough for a homepage, and derived from lab publications or lab-owned assets.
+
+The current homepage visual uses publication-derived panels for COPD imaging, omics analysis, microbiome composition, and statistical methods.
+
+## 4. How to Edit a Member Profile
 
 Edit that member's folder under `people/`.
 
@@ -97,7 +112,7 @@ To update a member, edit the relevant fields:
 
 Do not remove the quotation marks or commas unless you are comfortable editing JSON. If the file is invalid JSON, the People section may not load.
 
-## 4. How to Add a New Student Folder
+## 5. How to Add a New Student Folder
 
 1. Create a new folder under `people/`.
 2. Use a lowercase folder name without spaces, such as `people/new-student-name/`.
@@ -115,7 +130,7 @@ Example entry in `people/index.json`:
 
 GitHub Pages cannot automatically list folders, so a new folder will not appear on the website until its `profile.json` path is added to `people/index.json`.
 
-## 5. How to Add a Student Photo
+## 6. How to Add a Student Photo
 
 1. Add the image file to that student's folder under `people/`.
 2. Use a simple lowercase filename without spaces when possible.
@@ -125,7 +140,7 @@ GitHub Pages cannot automatically list folders, so a new folder will not appear 
    - `people/eunjae-han/eunjae-han.jpg`
    - `people/seoyoung-bae/seoyoung-bae.jpg`
 
-## 6. How to Connect a Photo in `profile.json`
+## 7. How to Connect a Photo in `profile.json`
 
 Set the `photo` field to the image path.
 
@@ -137,7 +152,7 @@ Example:
 
 If `photo` is empty or the image path is incorrect, the website will show a simple placeholder avatar instead of a broken image.
 
-## 7. How to Add Lab Life Photos
+## 8. How to Add Lab Life Photos
 
 The Lab Life section is rendered from `gallery.json`. To add a new photo:
 
@@ -166,7 +181,7 @@ If the image path is missing or incorrect, the website shows a simple placeholde
 []
 ```
 
-## 8. Information That Should Not Be Uploaded
+## 9. Information That Should Not Be Uploaded
 
 Do not upload private personal information, including:
 
