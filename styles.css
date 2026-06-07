@@ -99,6 +99,14 @@ ol {
   padding: 86px 0;
 }
 
+.anchor-compat {
+  position: relative;
+  top: -88px;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
 .band {
   background: var(--soft);
   border-block: 1px solid var(--line);
