@@ -66,7 +66,7 @@ h3 {
 
 h1 {
   margin-bottom: 0.8rem;
-  font-size: clamp(3.2rem, 8vw, 5.8rem);
+  font-size: 4rem;
   font-weight: 800;
 }
 
@@ -221,7 +221,39 @@ ol {
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 740px;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.hero-identity .eyebrow {
+  margin-bottom: 0;
+}
+
+.hero-mini-brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0.28rem 0.62rem;
+  color: var(--white);
+  background: var(--navy);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.hero-subtitle {
+  margin-bottom: 0.35rem;
+  color: var(--navy);
+  font-size: 1.28rem;
+  font-weight: 800;
 }
 
 .eyebrow {
@@ -235,7 +267,7 @@ ol {
 
 .tagline {
   color: var(--navy-2);
-  font-size: 1.5rem;
+  font-size: 1.24rem;
   font-weight: 750;
 }
 
@@ -345,6 +377,25 @@ ol {
   font-size: 0.94rem;
 }
 
+.training-panel {
+  margin: 1.2rem 0;
+  padding: 1.15rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.05);
+}
+
+.training-panel h3 {
+  margin-bottom: 0.5rem;
+}
+
+.training-panel p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .research-snapshots {
   display: grid;
   grid-template-columns: 1.08fr 0.96fr 0.96fr;
@@ -408,16 +459,25 @@ ol {
 
 .publication-list {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .publication-item {
-  padding: 1.2rem 1.35rem;
+  padding: 1.25rem 1.4rem;
+}
+
+.publication-item h3 {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .publication-item p {
   color: var(--muted);
-  margin-bottom: 0;
+}
+
+.publication-note {
+  margin-bottom: 1rem;
+  font-size: 0.94rem;
 }
 
 .citation-list {
@@ -451,7 +511,7 @@ ol {
 }
 
 #people .section-heading h2 {
-  font-size: clamp(2.5rem, 5vw, 3.6rem);
+  font-size: 3.2rem;
   letter-spacing: 0;
 }
 
@@ -735,6 +795,10 @@ ol {
 }
 
 @media (max-width: 900px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
   .nav {
     min-height: auto;
     padding: 0.8rem 0;
@@ -791,11 +855,23 @@ ol {
   }
 
   h1 {
-    font-size: 3.15rem;
+    font-size: 2.55rem;
   }
 
   h2 {
     font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .tagline {
+    font-size: 1.08rem;
+  }
+
+  #people .section-heading h2 {
+    font-size: 2.05rem;
   }
 
   .brand-text small {

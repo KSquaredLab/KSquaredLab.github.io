@@ -24,7 +24,7 @@ const initialsFor = (name = "") =>
     .toUpperCase();
 
 const fetchJson = async (path) => {
-  const response = await fetch(path, { cache: "no-store" });
+  const response = await fetch(path, { cache: "no-cache" });
   if (!response.ok) throw new Error(`Could not load ${path}`);
   return response.json();
 };
@@ -118,7 +118,7 @@ const renderPeople = (groups) => {
 };
 
 const loadPeopleFromManifest = async () => {
-  const manifest = await fetchJson("people/index.json");
+  const manifest = await fetchJson("./people/index.json");
   const groups = manifest.groups || [];
 
   return Promise.all(
@@ -133,20 +133,47 @@ const loadPeopleFromManifest = async () => {
   );
 };
 
-const loadPeopleFromLegacyJson = async () => {
-  const data = await fetchJson("people.json");
+const loadPeopleFromPeopleJson = async () => {
+  const data = await fetchJson("./people.json");
+  if (!data || typeof data !== "object") {
+    throw new Error("people.json is not a valid people data object");
+  }
+
   return defaultGroups.map((group) => ({
     ...group,
     people: data[group.key] || []
   }));
 };
 
-loadPeopleFromManifest()
-  .catch(loadPeopleFromLegacyJson)
-  .then(renderPeople)
-  .catch((error) => {
-    peopleContainer.innerHTML = "";
-    peopleContainer.appendChild(
-      createElement("p", "empty-note", `People information could not be loaded: ${error.message}`)
-    );
-  });
+const loadPeople = async () => {
+  try {
+    return await loadPeopleFromPeopleJson();
+  } catch (peopleJsonError) {
+    try {
+      return await loadPeopleFromManifest();
+    } catch (manifestError) {
+      throw new Error(`${peopleJsonError.message}; ${manifestError.message}`);
+    }
+  }
+};
+
+const renderPeopleError = (error) => {
+  const hasStaticFallback = peopleContainer.querySelector("[data-static-fallback]");
+  const message = "Showing static people information because the live people data could not be loaded.";
+
+  if (hasStaticFallback) {
+    const fallbackNote = createElement("p", "empty-note", message);
+    fallbackNote.dataset.peopleLoadError = error.message;
+    peopleContainer.appendChild(fallbackNote);
+    return;
+  }
+
+  peopleContainer.innerHTML = "";
+  peopleContainer.appendChild(createElement("p", "empty-note", message));
+};
+
+if (peopleContainer) {
+  loadPeople()
+    .then(renderPeople)
+    .catch(renderPeopleError);
+}
