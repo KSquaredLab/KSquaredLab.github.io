@@ -46,8 +46,12 @@ const createAvatar = (person) => {
   return createElement("div", "person-placeholder", initialsFor(person.name));
 };
 
-const createPersonCard = (person) => {
-  const card = createElement("article", "person-card");
+const createPersonCard = (person, groupKey) => {
+  const isPrincipalInvestigator = groupKey === "principalInvestigator";
+  const card = createElement(
+    "article",
+    `person-card ${isPrincipalInvestigator ? "person-card-pi" : "person-card-member"}`
+  );
   const details = createElement("div", "person-details");
 
   details.appendChild(createElement("h4", "", person.name));
@@ -92,6 +96,7 @@ const createPersonCard = (person) => {
 
 const renderPeopleGroup = ({ key, title, people }) => {
   const section = createElement("section", "people-group");
+  section.dataset.group = key;
   section.appendChild(createElement("h3", "", title));
 
   if (!people.length) {
@@ -100,7 +105,7 @@ const renderPeopleGroup = ({ key, title, people }) => {
   }
 
   const grid = createElement("div", "people-grid");
-  people.forEach((person) => grid.appendChild(createPersonCard(person)));
+  people.forEach((person) => grid.appendChild(createPersonCard(person, key)));
   section.appendChild(grid);
   return section;
 };
