@@ -1,0 +1,91 @@
+{
+  "principalInvestigator": [
+    {
+      "name": "Kangjin Kim, PhD",
+      "koreanName": "김강진",
+      "role": "Principal Investigator",
+      "title": "Assistant Professor",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Biostatistics",
+        "Bioinformatics",
+        "Biomedical AI",
+        "Statistical genetics",
+        "Multi-omics",
+        "Respiratory disease data science"
+      ],
+      "bio": "Kangjin Kim is an assistant professor in the Department of Applied Statistics at Gachon University. His research focuses on statistical and computational methods for biomedical data, with applications to multi-omics, respiratory disease, and precision medicine."
+    }
+  ],
+  "graduateStudents": [
+    {
+      "name": "Junjae Won",
+      "koreanName": "원준재",
+      "role": "Master’s Student",
+      "title": "",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Survival analysis",
+        "Biomedical AI",
+        "Prediction modeling",
+        "Environmental health data science"
+      ],
+      "bio": "Junjae is interested in developing statistical and machine learning approaches for biomedical and environmental health data."
+    },
+    {
+      "name": "Jihyun Lee",
+      "koreanName": "이지현",
+      "role": "Master’s Student",
+      "title": "",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Biostatistics",
+        "Clinical data analysis",
+        "Machine learning",
+        "Biomedical research"
+      ],
+      "bio": "Jihyun is interested in applying biostatistical and machine learning methods to clinical and biomedical research questions."
+    },
+    {
+      "name": "Eunjae Han",
+      "koreanName": "한은재",
+      "role": "Master’s Student",
+      "title": "",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Multi-omics",
+        "DNA methylation",
+        "Bioinformatics",
+        "Statistical genetics"
+      ],
+      "bio": "Eunjae is interested in using bioinformatics and statistical methods to study omics data and disease-related biomarkers."
+    }
+  ],
+  "undergraduateResearchers": [
+    {
+      "name": "Seoyoung Bae",
+      "koreanName": "배서영",
+      "role": "Undergraduate Research Assistant",
+      "title": "",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Bioinformatics",
+        "Data science",
+        "Statistical modeling",
+        "Biomedical data analysis"
+      ],
+      "bio": "Seoyoung is interested in learning statistical and computational methods for analyzing complex biomedical data."
+    }
+  ],
+  "alumni": []
+}
