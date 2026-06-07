@@ -8,8 +8,9 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 
 - `index.html` edits the main website sections and text.
 - `styles.css` edits the layout, colors, typography, and responsive design.
-- `script.js` loads and renders the People and Lab Life sections from JSON files.
+- `script.js` loads and renders the People, Lab Life, and funded project sections from JSON files.
 - `people.json` is the primary data file for the People section.
+- `projects.json` stores grants and funded project information.
 - `people/index.json` controls the order and group placement of lab member profiles.
 - `people/[person-name]/profile.json` stores each member's name, role, department, interests, bio, email field, and optional photo path.
 - `people/[person-name]/` can also store that member's profile photo.
@@ -41,9 +42,10 @@ Common sections to update:
 
 - Home: edit the `#home` section.
 - Research: edit the `#research` section.
+- Projects: edit `projects.json`.
 - Publications: edit the `#publications` section.
 - Lab Life: edit `gallery.json` and add photos to `images/gallery/`.
-- Join Us: edit the `#join` section.
+- For Students: edit the `#students` section.
 - News: edit the `#news` section.
 - Contact: edit the `#contact` section.
 
@@ -51,7 +53,39 @@ The publication list is currently written directly in the `#publications` sectio
 
 After editing, commit and push the changes to GitHub. GitHub Pages will update automatically after deployment finishes.
 
-## 3. How to Replace Homepage Visual Panels
+## 3. How to Edit Funded Projects
+
+The Grants and Funded Projects section is rendered from `projects.json`.
+
+To add a new project:
+
+1. Add a new object to `projects.json`.
+2. Include `title`, `fundingAgency`, `period`, `role`, and `description`.
+3. Add `program` and `koreanTitle` when useful.
+4. Commit and push changes.
+5. Do not include grant budget amounts, private administrative details, internal screenshots, phone numbers, birth dates, student IDs, or other sensitive information.
+
+Example entry:
+
+```json
+{
+  "title": "Project Title",
+  "koreanTitle": "국문 과제명",
+  "fundingAgency": "Funding Agency",
+  "program": "Program Name",
+  "period": "2026.03 – 2029.02",
+  "role": "Principal Investigator",
+  "description": "Short factual description of the funded work."
+}
+```
+
+To hide the section temporarily, set `projects.json` to an empty array:
+
+```json
+[]
+```
+
+## 4. How to Replace Homepage Visual Panels
 
 Homepage visual images are stored in `images/hero/`.
 
@@ -65,7 +99,7 @@ To replace them:
 
 The current homepage visual uses publication-derived panels for COPD imaging, omics analysis, microbiome composition, and statistical methods.
 
-## 4. How to Edit a Member Profile
+## 5. How to Edit a Member Profile
 
 Edit that member's folder under `people/`.
 
@@ -112,7 +146,7 @@ To update a member, edit the relevant fields:
 
 Do not remove the quotation marks or commas unless you are comfortable editing JSON. If the file is invalid JSON, the People section may not load.
 
-## 5. How to Add a New Student Folder
+## 6. How to Add a New Student Folder
 
 1. Create a new folder under `people/`.
 2. Use a lowercase folder name without spaces, such as `people/new-student-name/`.
@@ -130,7 +164,7 @@ Example entry in `people/index.json`:
 
 GitHub Pages cannot automatically list folders, so a new folder will not appear on the website until its `profile.json` path is added to `people/index.json`.
 
-## 6. How to Add a Student Photo
+## 7. How to Add a Student Photo
 
 1. Add the image file to that student's folder under `people/`.
 2. Use a simple lowercase filename without spaces when possible.
@@ -140,7 +174,7 @@ GitHub Pages cannot automatically list folders, so a new folder will not appear 
    - `people/eunjae-han/eunjae-han.jpg`
    - `people/seoyoung-bae/seoyoung-bae.jpg`
 
-## 7. How to Connect a Photo in `profile.json`
+## 8. How to Connect a Photo in `profile.json`
 
 Set the `photo` field to the image path.
 
@@ -152,7 +186,7 @@ Example:
 
 If `photo` is empty or the image path is incorrect, the website will show a simple placeholder avatar instead of a broken image.
 
-## 8. How to Add Lab Life Photos
+## 9. How to Add Lab Life Photos
 
 The Lab Life section is rendered from `gallery.json`. To add a new photo:
 
@@ -181,7 +215,7 @@ If the image path is missing or incorrect, the website shows a simple placeholde
 []
 ```
 
-## 9. Information That Should Not Be Uploaded
+## 10. Information That Should Not Be Uploaded
 
 Do not upload private personal information, including:
 
@@ -203,7 +237,7 @@ Before uploading photos of students or collaborators, confirm that the people sh
 
 ## Local Preview
 
-Because the People and Lab Life sections load JSON files, preview the site with a local web server instead of opening `index.html` directly.
+Because the People, Lab Life, and funded project sections load JSON files, preview the site with a local web server instead of opening `index.html` directly.
 
 From the repository folder, run:
 

@@ -447,6 +447,7 @@ ol {
 }
 
 .card,
+.project-card,
 .publication-item,
 .application-card,
 .korean-box,
@@ -463,6 +464,59 @@ ol {
 
 .card p {
   color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.25rem 1.35rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0;
+}
+
+.project-title-korean {
+  margin-bottom: 0;
+  color: var(--navy-2);
+  font-size: 0.96rem;
+  font-weight: 760;
+}
+
+.project-description {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.project-facts {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-top: 0.1rem;
+}
+
+.project-fact-row {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 0.8rem;
+}
+
+.project-facts dt {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.project-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .publication-list {
@@ -915,6 +969,7 @@ ol {
   .research-grid,
   .research-snapshots,
   .gallery-grid,
+  .project-grid,
   .people-grid,
   .expertise-list,
   .two-column {
@@ -949,6 +1004,11 @@ ol {
 
   .tagline {
     font-size: 1.08rem;
+  }
+
+  .project-fact-row {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
   }
 
   #people .section-heading h2 {

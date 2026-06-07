@@ -1,5 +1,6 @@
 const peopleContainer = document.querySelector("#people-content");
 const galleryContainer = document.querySelector("#gallery-content");
+const projectsContainer = document.querySelector("#projects-content");
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -240,4 +241,62 @@ if (galleryContainer) {
   fetchJson("./gallery.json")
     .then(renderGallery)
     .catch(renderGalleryError);
+}
+
+const createProjectCard = (project) => {
+  const card = createElement("article", "project-card");
+
+  card.appendChild(createElement("h3", "", project.title || "Funded Project"));
+
+  if (project.koreanTitle) {
+    card.appendChild(createElement("p", "project-title-korean", project.koreanTitle));
+  }
+
+  const facts = createElement("dl", "project-facts");
+  [
+    ["Funding agency", project.fundingAgency],
+    ["Program", project.program],
+    ["Period", project.period],
+    ["Role", project.role]
+  ].forEach(([label, value]) => {
+    if (!value) return;
+    const row = createElement("div", "project-fact-row");
+    row.appendChild(createElement("dt", "", label));
+    row.appendChild(createElement("dd", "", value));
+    facts.appendChild(row);
+  });
+
+  if (facts.children.length) {
+    card.appendChild(facts);
+  }
+
+  if (project.description) {
+    card.appendChild(createElement("p", "project-description", project.description));
+  }
+
+  return card;
+};
+
+const renderProjects = (projects) => {
+  const section = document.querySelector("#projects");
+  const visibleProjects = Array.isArray(projects) ? projects.filter((project) => project && project.title) : [];
+
+  if (!visibleProjects.length) {
+    if (section) section.hidden = true;
+    return;
+  }
+
+  projectsContainer.innerHTML = "";
+  visibleProjects.forEach((project) => projectsContainer.appendChild(createProjectCard(project)));
+};
+
+const renderProjectsError = () => {
+  const section = document.querySelector("#projects");
+  if (section) section.hidden = true;
+};
+
+if (projectsContainer) {
+  fetchJson("./projects.json")
+    .then(renderProjects)
+    .catch(renderProjectsError);
 }
