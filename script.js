@@ -1,11 +1,11 @@
 const peopleContainer = document.querySelector("#people-content");
 
-const groupTitles = {
-  principalInvestigator: "Principal Investigator",
-  graduateStudents: "Graduate Students",
-  undergraduateResearchers: "Undergraduate Researchers",
-  alumni: "Alumni"
-};
+const defaultGroups = [
+  { key: "principalInvestigator", title: "Principal Investigator" },
+  { key: "graduateStudents", title: "Graduate Students" },
+  { key: "undergraduateResearchers", title: "Undergraduate Researchers" },
+  { key: "alumni", title: "Alumni" }
+];
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -14,7 +14,7 @@ const createElement = (tag, className, text) => {
   return element;
 };
 
-const initialsFor = (name) =>
+const initialsFor = (name = "") =>
   name
     .split(" ")
     .filter(Boolean)
@@ -22,6 +22,12 @@ const initialsFor = (name) =>
     .join("")
     .slice(0, 2)
     .toUpperCase();
+
+const fetchJson = async (path) => {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Could not load ${path}`);
+  return response.json();
+};
 
 const createAvatar = (person) => {
   if (person.photo) {
@@ -80,9 +86,9 @@ const createPersonCard = (person) => {
   return card;
 };
 
-const renderPeopleGroup = (key, people) => {
+const renderPeopleGroup = ({ key, title, people }) => {
   const section = createElement("section", "people-group");
-  section.appendChild(createElement("h3", "", groupTitles[key] || key));
+  section.appendChild(createElement("h3", "", title));
 
   if (!people.length) {
     section.appendChild(createElement("p", "empty-note", key === "alumni" ? "No alumni listed yet." : "No members listed yet."));
@@ -95,18 +101,39 @@ const renderPeopleGroup = (key, people) => {
   return section;
 };
 
-const renderPeople = (data) => {
+const renderPeople = (groups) => {
   peopleContainer.innerHTML = "";
-  Object.keys(groupTitles).forEach((key) => {
-    peopleContainer.appendChild(renderPeopleGroup(key, data[key] || []));
+  groups.forEach((group) => {
+    peopleContainer.appendChild(renderPeopleGroup(group));
   });
 };
 
-fetch("people.json")
-  .then((response) => {
-    if (!response.ok) throw new Error("Could not load people.json");
-    return response.json();
-  })
+const loadPeopleFromManifest = async () => {
+  const manifest = await fetchJson("people/index.json");
+  const groups = manifest.groups || [];
+
+  return Promise.all(
+    groups.map(async (group) => {
+      const people = await Promise.all((group.profiles || []).map((path) => fetchJson(path)));
+      return {
+        key: group.key,
+        title: group.title,
+        people
+      };
+    })
+  );
+};
+
+const loadPeopleFromLegacyJson = async () => {
+  const data = await fetchJson("people.json");
+  return defaultGroups.map((group) => ({
+    ...group,
+    people: data[group.key] || []
+  }));
+};
+
+loadPeopleFromManifest()
+  .catch(loadPeopleFromLegacyJson)
   .then(renderPeople)
   .catch((error) => {
     peopleContainer.innerHTML = "";

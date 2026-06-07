@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "key": "principalInvestigator",
+      "title": "Principal Investigator",
+      "profiles": [
+        "people/kangjin-kim/profile.json"
+      ]
+    },
+    {
+      "key": "graduateStudents",
+      "title": "Graduate Students",
+      "profiles": [
+        "people/junjae-won/profile.json",
+        "people/jihyun-lee/profile.json",
+        "people/eunjae-han/profile.json"
+      ]
+    },
+    {
+      "key": "undergraduateResearchers",
+      "title": "Undergraduate Researchers",
+      "profiles": [
+        "people/seoyoung-bae/profile.json"
+      ]
+    },
+    {
+      "key": "alumni",
+      "title": "Alumni",
+      "profiles": []
+    }
+  ]
+}

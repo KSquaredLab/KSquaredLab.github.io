@@ -1,0 +1,16 @@
+{
+  "name": "Jihyun Lee",
+  "koreanName": "이지현",
+  "role": "Master’s Student",
+  "title": "",
+  "department": "Department of Applied Statistics, Gachon University",
+  "email": "",
+  "photo": "",
+  "researchInterests": [
+    "Biostatistics",
+    "Clinical data analysis",
+    "Machine learning",
+    "Biomedical research"
+  ],
+  "bio": "Jihyun is interested in applying biostatistical and machine learning methods to clinical and biomedical research questions."
+}

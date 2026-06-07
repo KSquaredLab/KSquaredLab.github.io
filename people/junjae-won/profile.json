@@ -1,0 +1,16 @@
+{
+  "name": "Junjae Won",
+  "koreanName": "원준재",
+  "role": "Master’s Student",
+  "title": "",
+  "department": "Department of Applied Statistics, Gachon University",
+  "email": "",
+  "photo": "",
+  "researchInterests": [
+    "Survival analysis",
+    "Biomedical AI",
+    "Prediction modeling",
+    "Environmental health data science"
+  ],
+  "bio": "Junjae is interested in developing statistical and machine learning approaches for biomedical and environmental health data."
+}

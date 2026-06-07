@@ -1,0 +1,16 @@
+{
+  "name": "Seoyoung Bae",
+  "koreanName": "배서영",
+  "role": "Undergraduate Research Assistant",
+  "title": "",
+  "department": "Department of Applied Statistics, Gachon University",
+  "email": "",
+  "photo": "",
+  "researchInterests": [
+    "Bioinformatics",
+    "Data science",
+    "Statistical modeling",
+    "Biomedical data analysis"
+  ],
+  "bio": "Seoyoung is interested in learning statistical and computational methods for analyzing complex biomedical data."
+}

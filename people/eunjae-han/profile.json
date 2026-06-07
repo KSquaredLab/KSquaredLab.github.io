@@ -1,0 +1,16 @@
+{
+  "name": "Eunjae Han",
+  "koreanName": "한은재",
+  "role": "Master’s Student",
+  "title": "",
+  "department": "Department of Applied Statistics, Gachon University",
+  "email": "",
+  "photo": "",
+  "researchInterests": [
+    "Multi-omics",
+    "DNA methylation",
+    "Bioinformatics",
+    "Statistical genetics"
+  ],
+  "bio": "Eunjae is interested in using bioinformatics and statistical methods to study omics data and disease-related biomarkers."
+}

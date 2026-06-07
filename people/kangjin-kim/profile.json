@@ -1,0 +1,18 @@
+{
+  "name": "Kangjin Kim, PhD",
+  "koreanName": "김강진",
+  "role": "Principal Investigator",
+  "title": "Assistant Professor",
+  "department": "Department of Applied Statistics, Gachon University",
+  "email": "kim0616@gachon.ac.kr",
+  "photo": "people/kangjin-kim/kangjin-kim.jpg",
+  "researchInterests": [
+    "Biostatistics",
+    "Bioinformatics",
+    "Biomedical AI",
+    "Statistical genetics",
+    "Multi-omics",
+    "Respiratory disease data science"
+  ],
+  "bio": "Kangjin Kim is an assistant professor in the Department of Applied Statistics at Gachon University. His research focuses on statistical and computational methods for biomedical data, with applications to multi-omics, respiratory disease, and precision medicine."
+}
