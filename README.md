@@ -61,9 +61,9 @@ To add a new project:
 
 1. Add a new object to `projects.json`.
 2. Include `title`, `fundingAgency`, `period`, `role`, and `description`.
-3. Add `program` and `koreanTitle` when useful.
+3. Add `grantProgram`, `totalFunding`, and `koreanTitle` when useful and appropriate for public display.
 4. Commit and push changes.
-5. Do not include grant budget amounts, private administrative details, internal screenshots, phone numbers, birth dates, student IDs, or other sensitive information.
+5. Do not include private administrative details, internal screenshots, phone numbers, birth dates, student IDs, non-public budget details, or other sensitive information. Only include funding amounts when they are intended for public display.
 
 Example entry:
 
@@ -72,9 +72,10 @@ Example entry:
   "title": "Project Title",
   "koreanTitle": "국문 과제명",
   "fundingAgency": "Funding Agency",
-  "program": "Program Name",
+  "grantProgram": "Grant Program Name",
   "period": "2026.03 – 2029.02",
   "role": "Principal Investigator",
+  "totalFunding": "Public funding amount, if appropriate",
   "description": "Short factual description of the funded work."
 }
 ```

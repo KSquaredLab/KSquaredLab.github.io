@@ -277,9 +277,10 @@ const createProjectCard = (project) => {
   const facts = createElement("dl", "project-facts");
   [
     ["Funding agency", project.fundingAgency],
-    ["Program", project.program],
+    ["Grant program", project.grantProgram || project.program],
     ["Period", project.period],
-    ["Role", project.role]
+    ["Role", project.role],
+    ["Total funding", project.totalFunding]
   ].forEach(([label, value]) => {
     if (!value) return;
     const row = createElement("div", "project-fact-row");
