@@ -672,8 +672,8 @@ ol {
 }
 
 .person-card-pi {
-  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
-  gap: 2.2rem;
+  grid-template-columns: minmax(200px, 255px) minmax(0, 1fr);
+  gap: 1.9rem;
   padding: 1.25rem;
   box-shadow: 0 12px 30px rgba(11, 31, 58, 0.06);
 }
@@ -1137,7 +1137,7 @@ ol {
 
   .person-card-pi .person-photo,
   .person-card-pi .person-placeholder {
-    width: min(220px, 100%);
+    width: min(190px, 100%);
   }
 
   .contact-card dl div {
