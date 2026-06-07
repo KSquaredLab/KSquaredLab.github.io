@@ -148,10 +148,10 @@ ol {
   height: 40px;
   display: grid;
   place-items: center;
-  color: var(--navy);
-  background: var(--white);
-  border: 2px solid var(--line);
-  border-radius: var(--radius);
+  color: var(--white);
+  background: var(--navy);
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  border-radius: 7px;
   font-weight: 800;
   font-size: 0.92rem;
   letter-spacing: 0;
@@ -200,14 +200,14 @@ ol {
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 255, 255, 0.96) 55%,
-      rgba(255, 255, 255, 0.86) 70%,
-      rgba(255, 255, 255, 0.38) 100%
+      rgba(255, 255, 255, 0.95) 54%,
+      rgba(255, 255, 255, 0.72) 72%,
+      rgba(255, 255, 255, 0.18) 100%
     ),
     url("images/hero/homepage-visual-panels.jpg");
-  background-position: center, calc(100% + 76px) center;
+  background-position: center, calc(100% + 52px) center;
   background-repeat: no-repeat;
-  background-size: auto, clamp(620px, 52vw, 900px) auto;
+  background-size: auto, clamp(740px, 62vw, 1080px) auto;
 }
 
 .hero::after {
@@ -302,8 +302,8 @@ ol {
   max-width: 660px;
   margin-top: 0.35rem;
   color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 620;
+  font-size: 0.78rem;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -1025,13 +1025,13 @@ ol {
       linear-gradient(
         90deg,
         rgba(255, 255, 255, 0.99) 0%,
-        rgba(255, 255, 255, 0.97) 68%,
-        rgba(255, 255, 255, 0.9) 100%
+        rgba(255, 255, 255, 0.96) 66%,
+        rgba(255, 255, 255, 0.82) 100%
       ),
       url("images/hero/homepage-visual-panels.jpg");
-    background-position: center, calc(100% + 160px) 46%;
+    background-position: center, calc(100% + 130px) 46%;
     background-repeat: no-repeat;
-    background-size: auto, 620px auto;
+    background-size: auto, 720px auto;
   }
 
   .hero-grid,
