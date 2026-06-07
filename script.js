@@ -1,4 +1,5 @@
 const peopleContainer = document.querySelector("#people-content");
+const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
 
@@ -206,6 +207,100 @@ if (peopleContainer) {
   loadPeople()
     .then(renderPeople)
     .catch(renderPeopleError);
+}
+
+const createResearchPlaceholder = (theme) => {
+  const placeholder = createElement("div", "research-theme-placeholder");
+  placeholder.setAttribute("role", "img");
+  placeholder.setAttribute("aria-label", theme.alt || `${theme.title} visual placeholder`);
+  placeholder.appendChild(createElement("span", "", theme.title || "Research"));
+  return placeholder;
+};
+
+const createRelatedWork = (items = []) => {
+  const validItems = items.filter((item) => item?.label);
+  if (!validItems.length) return null;
+
+  const related = createElement("div", "related-work");
+  related.appendChild(createElement("h4", "", "Related work"));
+
+  const list = createElement("ul", "");
+  validItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    if (item.url) {
+      const link = createElement("a", "", item.label);
+      link.href = item.url;
+      listItem.appendChild(link);
+    } else {
+      listItem.textContent = item.label;
+    }
+    list.appendChild(listItem);
+  });
+
+  related.appendChild(list);
+  return related;
+};
+
+const createResearchCard = (theme) => {
+  const card = createElement("article", "research-theme-card");
+  const media = createElement("div", "research-theme-media");
+  const placeholder = createResearchPlaceholder(theme);
+  media.appendChild(placeholder);
+
+  if (theme.image) {
+    const image = document.createElement("img");
+    image.className = "research-theme-image";
+    image.alt = theme.alt || theme.title || "Research figure thumbnail";
+    image.loading = "eager";
+    image.onload = () => {
+      if (image.naturalWidth > 0) {
+        image.classList.add("is-loaded");
+        if (placeholder.isConnected) placeholder.remove();
+      }
+    };
+    image.onerror = () => image.remove();
+    media.appendChild(image);
+    image.src = theme.image;
+  }
+
+  const body = createElement("div", "research-theme-body");
+  body.appendChild(createElement("h3", "", theme.title || "Research Theme"));
+
+  const descriptions = Array.isArray(theme.description) ? theme.description : [theme.description];
+  descriptions
+    .filter(Boolean)
+    .slice(0, 3)
+    .forEach((description) => body.appendChild(createElement("p", "", description)));
+
+  const related = createRelatedWork(theme.relatedWork || []);
+  if (related) body.appendChild(related);
+
+  card.appendChild(media);
+  card.appendChild(body);
+  return card;
+};
+
+const renderResearch = (themes) => {
+  const visibleThemes = Array.isArray(themes) ? themes.filter((theme) => theme && theme.title) : [];
+
+  researchContainer.innerHTML = "";
+  if (!visibleThemes.length) {
+    researchContainer.appendChild(createElement("p", "empty-note", "Research themes will be added soon."));
+    return;
+  }
+
+  visibleThemes.forEach((theme) => researchContainer.appendChild(createResearchCard(theme)));
+};
+
+const renderResearchError = () => {
+  researchContainer.innerHTML = "";
+  researchContainer.appendChild(createElement("p", "empty-note", "Research themes could not be loaded."));
+};
+
+if (researchContainer) {
+  fetchJson("./research.json")
+    .then(renderResearch)
+    .catch(renderResearchError);
 }
 
 const createGalleryPlaceholder = (item) => {

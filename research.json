@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Statistical Methods for Biomedical Data",
+    "description": [
+      "We develop statistical methods for complex biomedical data, including high-dimensional, structured, and survival outcomes.",
+      "Our work emphasizes rigorous inference, reproducible analysis, and practical tools for biomedical research."
+    ],
+    "image": "images/hero/statistical-methods-panel.jpg",
+    "alt": "Power curves from microbiome statistical method evaluation",
+    "relatedWork": [
+      { "label": "TMAT" },
+      { "label": "mTMAT" }
+    ]
+  },
+  {
+    "title": "Multi-omics and Epigenetics",
+    "description": [
+      "We analyze molecular data such as DNA methylation, genetic variation, and other omics layers to study disease-related biological signals.",
+      "We are especially interested in integrative approaches that connect molecular profiles to clinical phenotypes."
+    ],
+    "image": "images/hero/omics-analysis-panel.jpg",
+    "alt": "Omics analysis scatter plot from biomedical research",
+    "relatedWork": [
+      { "label": "DNA methylation" },
+      { "label": "Epigenetic aging" },
+      { "label": "mLOY and respiratory disease" }
+    ]
+  },
+  {
+    "title": "Respiratory Disease and COPD Data Science",
+    "description": [
+      "We study respiratory disease using genetic, imaging, omics, and clinical data.",
+      "Our work includes COPD-related phenotypes such as lung function, emphysema, mucus plugging, and disease progression."
+    ],
+    "image": "images/research/copd-ct-mucus.jpg",
+    "alt": "Chest CT examples of mucus plugs from COPD research",
+    "relatedWork": [
+      { "label": "COPDGene" },
+      { "label": "ECLIPSE" },
+      { "label": "Mucus plugging" }
+    ]
+  },
+  {
+    "title": "Biomedical AI and Prediction Modeling",
+    "description": [
+      "We develop and evaluate prediction models for biomedical and clinical outcomes.",
+      "The lab is interested in survival prediction, interpretable machine learning, and robust validation of AI-based biomedical models."
+    ],
+    "image": "images/research/microbiome-method-plot.jpg",
+    "alt": "Tree-based microbiome method figure with model diagnostics",
+    "relatedWork": [
+      { "label": "Survival prediction" },
+      { "label": "Autoencoder-based models" },
+      { "label": "Tree-based survival models" }
+    ]
+  },
+  {
+    "title": "Environmental Health and Policy Data Science",
+    "description": [
+      "We apply statistical and data science methods to environmental health and policy-related problems.",
+      "This includes study design, survey analysis, sampling strategy, and quantitative evaluation of stakeholder perceptions and policy feasibility."
+    ],
+    "image": "images/research/microbiome-composition.jpg",
+    "alt": "Colorful composition plot from biomedical and environmental data analysis",
+    "relatedWork": [
+      {
+        "label": "Smart safety equipment certification criteria project",
+        "url": "#projects"
+      },
+      { "label": "Environmental health data analysis" }
+    ]
+  }
+]

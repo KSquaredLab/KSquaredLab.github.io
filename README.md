@@ -8,7 +8,8 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 
 - `index.html` edits the main website sections and text.
 - `styles.css` edits the layout, colors, typography, and responsive design.
-- `script.js` loads and renders the People, Lab Life, and funded project sections from JSON files.
+- `script.js` loads and renders the Research, People, Lab Life, and funded project sections from JSON files.
+- `research.json` stores Research section themes, thumbnail paths, and related work links.
 - `people.json` is the primary data file for the People section.
 - `projects.json` stores grants and funded project information.
 - `people/index.json` controls the order and group placement of lab member profiles.
@@ -41,7 +42,7 @@ Edit `index.html`.
 Common sections to update:
 
 - Home: edit the `#home` section.
-- Research: edit the `#research` section.
+- Research: edit `research.json` and replace thumbnails in `images/research/` or `images/hero/`.
 - Funded Projects: edit `projects.json`.
 - Publications: edit the `#publications` section.
 - Lab Life: edit `gallery.json` and add photos to `images/gallery/`.
@@ -52,7 +53,44 @@ The publication list is currently written directly in the `#publications` sectio
 
 After editing, commit and push the changes to GitHub. GitHub Pages will update automatically after deployment finishes.
 
-## 3. How to Edit Funded Projects
+## 3. How to Edit Research Themes
+
+The Research section is rendered from `research.json`.
+
+To update a research theme:
+
+1. Edit the theme object in `research.json`.
+2. Keep `title` short and use 2-3 concise `description` sentences.
+3. Add a thumbnail image path in `image`, usually from `images/research/` or `images/hero/`.
+4. Use descriptive `alt` text for the thumbnail.
+5. Add short `relatedWork` labels. Add a `url` only when there is a reliable DOI, PubMed, Google Scholar, publication, or project link.
+
+To replace a research thumbnail:
+
+1. Add a clean, web-ready image to `images/research/` or `images/hero/`.
+2. Use a lowercase filename with hyphens, such as `survival-modeling-panel.jpg`.
+3. Update the matching `image` path in `research.json`.
+4. Prefer high-resolution, uncluttered figure excerpts from lab papers or lab-owned assets.
+
+To add a new research theme:
+
+1. Add a new object to `research.json`.
+2. Include `title`, `description`, `image`, `alt`, and `relatedWork`.
+3. Keep the Research section concise; full citations belong in the Publications section.
+
+Example related work item:
+
+```json
+{ "label": "Smart safety equipment certification criteria project", "url": "#projects" }
+```
+
+If no reliable URL is available, leave the item as plain text:
+
+```json
+{ "label": "TMAT" }
+```
+
+## 4. How to Edit Funded Projects
 
 The Grants and Funded Projects section is rendered from `projects.json`.
 
@@ -85,7 +123,7 @@ To hide the section temporarily, set `projects.json` to an empty array:
 []
 ```
 
-## 4. How to Replace Homepage Visual Panels
+## 5. How to Replace Homepage Visual Panels
 
 Homepage visual images are stored in `images/hero/`.
 
@@ -99,7 +137,7 @@ To replace them:
 
 The current homepage visual uses publication-derived panels for COPD imaging, omics analysis, microbiome composition, and statistical methods.
 
-## 5. How to Edit a Member Profile
+## 6. How to Edit a Member Profile
 
 Edit that member's folder under `people/`.
 
@@ -153,7 +191,7 @@ To update a member, edit the relevant fields:
 
 Do not remove the quotation marks or commas unless you are comfortable editing JSON. If the file is invalid JSON, the People section may not load.
 
-## 6. How to Add a New Student Folder
+## 7. How to Add a New Student Folder
 
 1. Create a new folder under `people/`.
 2. Use a lowercase folder name without spaces, such as `people/new-student-name/`.
@@ -171,7 +209,7 @@ Example entry in `people/index.json`:
 
 GitHub Pages cannot automatically list folders, so a new folder will not appear on the website until its `profile.json` path is added to `people/index.json`.
 
-## 7. How to Add a Student Photo
+## 8. How to Add a Student Photo
 
 1. Add the image file to that student's folder under `people/`.
 2. Use a simple lowercase filename without spaces when possible.
@@ -181,7 +219,7 @@ GitHub Pages cannot automatically list folders, so a new folder will not appear 
    - `people/eunjae-han/eunjae-han.jpg`
    - `people/seoyoung-bae/seoyoung-bae.jpg`
 
-## 8. How to Connect a Photo in `profile.json`
+## 9. How to Connect a Photo in `profile.json`
 
 Set the `photo` field to the image path.
 
@@ -193,7 +231,7 @@ Example:
 
 If `photo` is empty or the image path is incorrect, the website will show a simple placeholder avatar instead of a broken image.
 
-## 9. How to Add Lab Life Photos
+## 10. How to Add Lab Life Photos
 
 The Lab Life section is rendered from `gallery.json`. To add a new photo:
 
@@ -222,7 +260,7 @@ If the image path is missing or incorrect, the website shows a simple placeholde
 []
 ```
 
-## 10. Information That Should Not Be Uploaded
+## 11. Information That Should Not Be Uploaded
 
 Do not upload private personal information, including:
 
