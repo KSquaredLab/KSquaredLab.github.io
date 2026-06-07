@@ -52,8 +52,8 @@
       "We develop and evaluate prediction models for biomedical and clinical outcomes.",
       "The lab is interested in survival prediction, interpretable machine learning, and robust validation of AI-based biomedical models."
     ],
-    "image": "images/research/enterotype-survival-curves.svg",
-    "alt": "Kaplan-Meier survival curves by enterotype from a gut microbe-derived extracellular vesicle study",
+    "image": "images/research/gut-liver-fig5-survival-curves.jpg",
+    "alt": "Cropped Fig. 5 Kaplan-Meier survival curves from a gut microbe-derived extracellular vesicle study",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
