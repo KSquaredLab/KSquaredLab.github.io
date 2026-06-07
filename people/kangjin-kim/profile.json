@@ -19,19 +19,15 @@
     "Biomedical AI",
     "Respiratory disease data science"
   ],
-  "bio": "Kangjin Kim, DPH, is an assistant professor in the Department of Applied Statistics at Gachon University. His research develops rigorous and reproducible statistical approaches for high-dimensional biomedical data, with applications to statistical genetics, multi-omics, survival and prediction modeling, respiratory disease, and precision medicine. Before joining Gachon University, he completed postdoctoral research training at Harvard Medical School and Brigham and Women’s Hospital.",
+  "bio": "Kangjin Kim is an assistant professor in the Department of Applied Statistics at Gachon University. His research develops rigorous and reproducible statistical approaches for high-dimensional biomedical data, with applications to statistical genetics, multi-omics, survival and prediction modeling, respiratory disease, and precision medicine.",
   "background": [
     {
-      "label": "Statistical training",
-      "value": "BS and MS in Statistics; DPH in Biostatistics"
+      "label": "Education",
+      "value": "BS in Statistics; MPH/DPH in Biostatistics"
     },
     {
-      "label": "Postdoctoral training",
+      "label": "Postdoctoral Research",
       "value": "Harvard Medical School and Brigham and Women’s Hospital"
-    },
-    {
-      "label": "Current position",
-      "value": "Assistant Professor, Department of Applied Statistics, Gachon University"
     }
   ]
 }
