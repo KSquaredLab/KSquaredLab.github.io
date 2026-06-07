@@ -1,18 +1,23 @@
 {
-  "name": "Kangjin Kim, PhD",
+  "name": "Kangjin Kim, DPH",
   "koreanName": "김강진",
   "role": "Principal Investigator",
   "title": "Assistant Professor",
   "department": "Department of Applied Statistics, Gachon University",
+  "training": "Postdoctoral research training: Harvard Medical School & Brigham and Women’s Hospital",
   "email": "kim0616@gachon.ac.kr",
   "photo": "people/kangjin-kim/kangjin-kim.jpg",
   "researchInterests": [
+    "Statistical methodology",
     "Biostatistics",
+    "Survival analysis",
+    "Prediction modeling",
+    "Statistical genetics",
+    "Rare variant analysis",
+    "Multi-omics",
     "Bioinformatics",
     "Biomedical AI",
-    "Statistical genetics",
-    "Multi-omics",
     "Respiratory disease data science"
   ],
-  "bio": "Kangjin Kim is an assistant professor in the Department of Applied Statistics at Gachon University. His research focuses on statistical and computational methods for biomedical data, with applications to multi-omics, respiratory disease, and precision medicine."
+  "bio": "Kangjin Kim, DPH, is an assistant professor in the Department of Applied Statistics at Gachon University. He completed postdoctoral research training at Harvard Medical School and Brigham and Women’s Hospital, where he worked on whole-genome sequencing, proteomics, pulmonary function, mucus plugging, and COPD data science. His lab emphasizes rigorous biostatistics, statistical genetics, survival and prediction modeling, and reproducible analysis of high-dimensional biomedical data."
 }

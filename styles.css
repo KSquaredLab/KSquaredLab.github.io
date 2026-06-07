@@ -437,6 +437,44 @@ ol {
   gap: 1rem;
 }
 
+.expertise-panel {
+  margin-bottom: 1.2rem;
+  padding: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.05);
+}
+
+.expertise-panel h3 {
+  margin-bottom: 1rem;
+}
+
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expertise-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--teal);
+}
+
+.expertise-list strong {
+  color: var(--navy);
+}
+
+.expertise-list span {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
 .research-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -558,10 +596,17 @@ ol {
 
 .person-korean-name,
 .person-meta,
+.person-training,
 .person-email,
 .person-interests {
   color: var(--muted);
   font-size: 0.93rem;
+}
+
+.person-training {
+  margin-top: 0.25rem;
+  color: var(--navy-2);
+  font-weight: 700;
 }
 
 .person-role {
@@ -762,6 +807,7 @@ ol {
 
   .research-grid,
   .people-grid,
+  .expertise-list,
   .two-column {
     grid-template-columns: 1fr;
   }

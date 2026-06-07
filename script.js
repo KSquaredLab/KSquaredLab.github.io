@@ -24,7 +24,7 @@ const initialsFor = (name = "") =>
     .toUpperCase();
 
 const fetchJson = async (path) => {
-  const response = await fetch(path);
+  const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`Could not load ${path}`);
   return response.json();
 };
@@ -60,6 +60,10 @@ const createPersonCard = (person) => {
 
   const meta = [person.title, person.department].filter(Boolean).join(" · ");
   if (meta) details.appendChild(createElement("div", "person-meta", meta));
+
+  if (person.training) {
+    details.appendChild(createElement("div", "person-training", person.training));
+  }
 
   if (person.email) {
     const email = createElement("div", "person-email");

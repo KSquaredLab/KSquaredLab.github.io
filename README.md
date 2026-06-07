@@ -53,7 +53,7 @@ Examples:
 
 - PI: `people/kangjin-kim/profile.json`
 - Junjae Won: `people/junjae-won/profile.json`
-- Jihyun Lee: `people/jihyun-lee/profile.json`
+- Jihyeon Lee: `people/jihyun-lee/profile.json`
 - Eunjae Han: `people/eunjae-han/profile.json`
 - Seoyoung Bae: `people/seoyoung-bae/profile.json`
 
@@ -66,6 +66,7 @@ Each person has fields like:
   "role": "Master’s Student",
   "title": "",
   "department": "Department of Applied Statistics, Gachon University",
+  "training": "",
   "email": "",
   "photo": "",
   "researchInterests": [
@@ -83,6 +84,7 @@ To update a member, edit the relevant fields:
 - `role`
 - `title`
 - `department`
+- `training`
 - `email`
 - `photo`
 - `researchInterests`
