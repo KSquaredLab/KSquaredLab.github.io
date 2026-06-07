@@ -618,35 +618,34 @@ ol {
 
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.2rem 2rem;
-}
-
-.people-group[data-group="principalInvestigator"] .people-grid {
   grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .person-card {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
-  gap: 1.15rem;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 1.05rem;
   align-items: start;
-  padding-top: 1.25rem;
-  background: transparent;
-  border-top: 1px solid var(--line);
+  min-width: 0;
+  padding: 1.05rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.045);
 }
 
 .person-card-pi {
   grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
   gap: 2.2rem;
-  padding-top: 0;
-  border-top: 0;
+  padding: 1.25rem;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.06);
 }
 
 .person-photo,
 .person-placeholder {
-  width: 112px;
-  height: 132px;
+  width: 104px;
+  height: 122px;
   border-radius: 4px;
   background: var(--soft);
   border: 1px solid var(--line);
@@ -657,6 +656,12 @@ ol {
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 4;
+}
+
+.person-card-member .person-photo,
+.person-card-member .person-placeholder {
+  width: 96px;
+  height: 112px;
 }
 
 .person-photo {
@@ -710,6 +715,12 @@ ol {
   font-size: 0.95rem;
 }
 
+.person-card-member .person-bio {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .person-card-pi .person-bio {
   max-width: 780px;
   font-size: 1rem;
@@ -743,9 +754,6 @@ ol {
 
 .person-background-row {
   min-width: 0;
-}
-
-.person-background-row:first-child {
   padding: 0.55rem 0.65rem;
   background: var(--white);
   border: 1px solid var(--line);
@@ -753,13 +761,9 @@ ol {
 }
 
 .person-background-list dt {
-  color: var(--teal);
+  color: var(--navy);
   font-size: 0.78rem;
   font-weight: 850;
-}
-
-.person-background-row:first-child dt {
-  color: var(--navy);
 }
 
 .person-background-list dd {
@@ -1110,13 +1114,13 @@ ol {
   }
 
   .person-card {
-    grid-template-columns: 86px minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .person-photo,
   .person-placeholder {
-    width: 86px;
-    height: 104px;
+    width: 96px;
+    height: 112px;
   }
 
   .person-card-pi {
