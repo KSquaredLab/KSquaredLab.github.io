@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Kaplan-Meier survival curves by enterotype</title>
+  <desc id="desc">Kaplan-Meier relapse-free survival curves adapted from a gut microbe-derived extracellular vesicle study.</desc>
+  <rect width="1200" height="675" rx="26" fill="#ffffff"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="58" y="54" fill="#0b1f3a" font-size="27" font-weight="800">Kaplan-Meier survival curves</text>
+    <text x="58" y="87" fill="#64748b" font-size="17">Enterotype-based relapse-free survival comparison</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#111827" font-weight="800">
+    <text x="30" y="130" font-size="42">A</text>
+    <text x="602" y="130" font-size="42">B</text>
+  </g>
+
+  <g stroke="#e2e8f0" stroke-width="1">
+    <path d="M105 170H532M105 292H532M105 414H532M105 536H532"/>
+    <path d="M676 170H1103M676 292H1103M676 414H1103M676 536H1103"/>
+  </g>
+
+  <g fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round">
+    <path d="M105 536V116M105 536H532"/>
+    <path d="M676 536V116M676 536H1103"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#111827" font-size="20">
+    <text transform="translate(45 380) rotate(-90)">Relapse-free survival</text>
+    <text transform="translate(616 380) rotate(-90)">Relapse-free survival</text>
+    <text x="222" y="604">Follow-up period (mo)</text>
+    <text x="793" y="604">Follow-up period (mo)</text>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#374151" font-size="18">
+    <text x="80" y="543">0</text><text x="68" y="420">0.25</text><text x="68" y="300">0.50</text><text x="68" y="176">1.00</text>
+    <text x="651" y="543">0</text><text x="639" y="420">0.25</text><text x="639" y="300">0.50</text><text x="639" y="176">1.00</text>
+    <text x="105" y="563">0</text><text x="220" y="563">10</text><text x="333" y="563">20</text><text x="448" y="563">30</text><text x="520" y="563">50</text>
+    <text x="676" y="563">0</text><text x="791" y="563">10</text><text x="904" y="563">20</text><text x="1019" y="563">30</text><text x="1091" y="563">50</text>
+  </g>
+
+  <g fill="none" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="butt">
+    <path d="M105 122H111V142H118V154H126V166H137V178H150V190H163V203H177V214H191V226H210V238H232V250H256V262H282V274H306V286H334V298H360V308H386V318H412V328H440V340H468V350H492V372H516V416H532" stroke="#111827"/>
+    <path d="M105 116H112V130H120V144H130V154H142V164H154V174H169V184H186V198H206V210H230V224H256V238H286V252H318V266H350V282H384V298H418V316H454V334H494V354H532" stroke="#b9b9b9"/>
+  </g>
+
+  <g fill="none" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="butt">
+    <path d="M676 124H682V139H689V153H697V164H706V176H718V187H733V199H749V212H769V224H790V238H812V252H835V266H858V279H882V294H906V307H930V322H954V336H978V350H1002V365H1028V380H1060V410H1090V455H1103" stroke="#111827"/>
+    <path d="M676 116H683V132H691V145H700V156H714V168H733V178H758V188H790V200H826V214H866V228H906V244H950V260H996V278H1044V302H1086V326H1103" stroke="#b9b9b9"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#111827">
+    <g transform="translate(362 126)">
+      <path d="M0 0H42" stroke="#111827" stroke-width="3"/>
+      <text x="55" y="7">Enterotype_stp=1</text>
+      <path d="M0 32H42" stroke="#b9b9b9" stroke-width="3"/>
+      <text x="55" y="39">Enterotype_stp=2</text>
+    </g>
+    <g transform="translate(934 126)">
+      <path d="M0 0H42" stroke="#111827" stroke-width="3"/>
+      <text x="55" y="7">Enterotype_stp=1</text>
+      <path d="M0 32H42" stroke="#b9b9b9" stroke-width="3"/>
+      <text x="55" y="39">Enterotype_stp=2</text>
+    </g>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="58" y="648" fill="#334155" font-size="17">
+      Adapted thumbnail: comparison of Kaplan-Meier survival curves according to enterotype.
+    </text>
+  </g>
+</svg>

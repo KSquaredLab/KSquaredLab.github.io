@@ -52,8 +52,8 @@
       "We develop and evaluate prediction models for biomedical and clinical outcomes.",
       "The lab is interested in survival prediction, interpretable machine learning, and robust validation of AI-based biomedical models."
     ],
-    "image": "images/research/prediction-modeling-workflow.svg",
-    "alt": "Schematic workflow for biomedical AI prediction modeling and validation",
+    "image": "images/research/enterotype-survival-curves.svg",
+    "alt": "Kaplan-Meier survival curves by enterotype from a gut microbe-derived extracellular vesicle study",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
@@ -68,8 +68,8 @@
       "We apply statistical and data science methods to environmental health and policy-related problems.",
       "This includes study design, survey analysis, sampling strategy, and quantitative evaluation of stakeholder perceptions and policy feasibility."
     ],
-    "image": "images/research/environmental-policy-workflow.svg",
-    "alt": "Schematic workflow for environmental health survey analysis and policy evaluation",
+    "image": "images/research/environmental-health-network.jpg",
+    "alt": "Network visualization used as a research thumbnail for environmental health data science",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
@@ -86,8 +86,8 @@
       "We study genetic architecture and rare variant signals using statistically principled approaches for sequencing and high-dimensional association data.",
       "This work connects statistical genetics, variant aggregation, and reproducible analysis workflows for biomedical discovery."
     ],
-    "image": "images/research/copd-gene-network.jpg",
-    "alt": "Gene network figure from respiratory disease and statistical genetics research",
+    "image": "images/research/pulmonary-function-regional-gwas.svg",
+    "alt": "Regional GWAS and posterior inclusion probability panels from whole-genome sequence analysis of pulmonary function and COPD",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
