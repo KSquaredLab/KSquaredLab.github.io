@@ -36,22 +36,6 @@
   ],
   "graduateStudents": [
     {
-      "name": "Junjae Won",
-      "koreanName": "원준재",
-      "role": "Master’s Student",
-      "title": "",
-      "department": "Department of Applied Statistics, Gachon University",
-      "email": "",
-      "photo": "",
-      "researchInterests": [
-        "Survival analysis",
-        "Biomedical AI",
-        "Prediction modeling",
-        "Environmental health data science"
-      ],
-      "bio": "Junjae is interested in developing statistical and machine learning approaches for biomedical and environmental health data."
-    },
-    {
       "name": "Jihyeon Lee",
       "koreanName": "이지현",
       "role": "Master’s Student",
@@ -68,6 +52,22 @@
         "Healthcare decision-making"
       ],
       "bio": "Jihyeon is a master's student in the Department of Applied Statistics at Gachon University. Her research focuses on aging, cognitive decline, and inflammation based on biostatistics and data analysis, with the goal of contributing to data-driven decision-making in healthcare."
+    },
+    {
+      "name": "Junjae Won",
+      "koreanName": "원준재",
+      "role": "Master’s Student",
+      "title": "",
+      "department": "Department of Applied Statistics, Gachon University",
+      "email": "",
+      "photo": "",
+      "researchInterests": [
+        "Survival analysis",
+        "Biomedical AI",
+        "Prediction modeling",
+        "Environmental health data science"
+      ],
+      "bio": "Junjae is interested in developing statistical and machine learning approaches for biomedical and environmental health data."
     },
     {
       "name": "Eunjae Han",
