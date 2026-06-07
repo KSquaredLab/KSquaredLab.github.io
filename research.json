@@ -86,8 +86,8 @@
       "We study genetic architecture and rare variant signals using statistically principled approaches for sequencing and high-dimensional association data.",
       "This work connects statistical genetics, variant aggregation, and reproducible analysis workflows for biomedical discovery."
     ],
-    "image": "images/research/pulmonary-function-regional-gwas.svg",
-    "alt": "Regional GWAS and posterior inclusion probability panels from whole-genome sequence analysis of pulmonary function and COPD",
+    "image": "images/research/genome-biology-fig2-regional-gwas.jpg",
+    "alt": "Cropped Fig. 2 regional GWAS panels from Genome Biology whole-genome sequence analysis of pulmonary function and COPD",
     "imageFit": "contain",
     "imagePosition": "center",
     "relatedWork": [
