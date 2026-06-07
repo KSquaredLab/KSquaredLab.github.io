@@ -244,6 +244,8 @@ const createRelatedWork = (items = []) => {
 const createResearchCard = (theme) => {
   const card = createElement("article", "research-theme-card");
   const media = createElement("div", "research-theme-media");
+  const imageFit = theme.imageFit === "contain" ? "contain" : "cover";
+  media.dataset.fit = imageFit;
   const placeholder = createResearchPlaceholder(theme);
   media.appendChild(placeholder);
 
@@ -252,6 +254,8 @@ const createResearchCard = (theme) => {
     image.className = "research-theme-image";
     image.alt = theme.alt || theme.title || "Research figure thumbnail";
     image.loading = "eager";
+    image.style.objectFit = imageFit;
+    if (theme.imagePosition) image.style.objectPosition = theme.imagePosition;
     image.onload = () => {
       if (image.naturalWidth > 0) {
         image.classList.add("is-loaded");

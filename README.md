@@ -63,14 +63,16 @@ To update a research theme:
 2. Keep `title` short and use 2-3 concise `description` sentences.
 3. Add a thumbnail image path in `image`, usually from `images/research/` or `images/hero/`.
 4. Use descriptive `alt` text for the thumbnail.
-5. Add short `relatedWork` labels. Add a `url` only when there is a reliable DOI, PubMed, Google Scholar, publication, or project link.
+5. Optional: add `imageFit` as `cover` or `contain`, and `imagePosition` such as `center` or `center top`, when a thumbnail needs careful cropping.
+6. Add short `relatedWork` labels. Add a `url` only when there is a reliable DOI, PubMed, Google Scholar, publication, or project link.
 
 To replace a research thumbnail:
 
 1. Add a clean, web-ready image to `images/research/` or `images/hero/`.
 2. Use a lowercase filename with hyphens, such as `survival-modeling-panel.jpg`.
 3. Update the matching `image` path in `research.json`.
-4. Prefer high-resolution, uncluttered figure excerpts from lab papers or lab-owned assets.
+4. Set `imageFit` to `contain` for method plots or figures where cropping would remove important information; use `cover` for photographic or imaging panels that crop well.
+5. Prefer high-resolution, uncluttered figure excerpts from lab papers or lab-owned assets.
 
 To add a new research theme:
 

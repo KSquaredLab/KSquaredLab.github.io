@@ -7,6 +7,8 @@
     ],
     "image": "images/hero/statistical-methods-panel.jpg",
     "alt": "Power curves from microbiome statistical method evaluation",
+    "imageFit": "contain",
+    "imagePosition": "center",
     "relatedWork": [
       { "label": "TMAT" },
       { "label": "mTMAT" }
@@ -20,6 +22,8 @@
     ],
     "image": "images/hero/omics-analysis-panel.jpg",
     "alt": "Omics analysis scatter plot from biomedical research",
+    "imageFit": "contain",
+    "imagePosition": "center",
     "relatedWork": [
       { "label": "DNA methylation" },
       { "label": "Epigenetic aging" },
@@ -34,6 +38,8 @@
     ],
     "image": "images/research/copd-ct-mucus.jpg",
     "alt": "Chest CT examples of mucus plugs from COPD research",
+    "imageFit": "cover",
+    "imagePosition": "center",
     "relatedWork": [
       { "label": "COPDGene" },
       { "label": "ECLIPSE" },
@@ -48,6 +54,8 @@
     ],
     "image": "images/research/microbiome-method-plot.jpg",
     "alt": "Tree-based microbiome method figure with model diagnostics",
+    "imageFit": "contain",
+    "imagePosition": "center",
     "relatedWork": [
       { "label": "Survival prediction" },
       { "label": "Autoencoder-based models" },
@@ -55,19 +63,37 @@
     ]
   },
   {
-    "title": "Environmental Health and Policy Data Science",
+    "title": "Environmental Health Data Science",
     "description": [
       "We apply statistical and data science methods to environmental health and policy-related problems.",
       "This includes study design, survey analysis, sampling strategy, and quantitative evaluation of stakeholder perceptions and policy feasibility."
     ],
     "image": "images/research/microbiome-composition.jpg",
     "alt": "Colorful composition plot from biomedical and environmental data analysis",
+    "imageFit": "cover",
+    "imagePosition": "center",
     "relatedWork": [
       {
         "label": "Smart safety equipment certification criteria project",
         "url": "#projects"
       },
       { "label": "Environmental health data analysis" }
+    ]
+  },
+  {
+    "title": "Statistical Genetics and Rare Variant Analysis",
+    "description": [
+      "We study genetic architecture and rare variant signals using statistically principled approaches for sequencing and high-dimensional association data.",
+      "This work connects statistical genetics, variant aggregation, and reproducible analysis workflows for biomedical discovery."
+    ],
+    "image": "images/research/copd-gene-network.jpg",
+    "alt": "Gene network figure from respiratory disease and statistical genetics research",
+    "imageFit": "contain",
+    "imagePosition": "center",
+    "relatedWork": [
+      { "label": "Statistical genetics" },
+      { "label": "Rare variant analysis" },
+      { "label": "Whole-genome sequencing" }
     ]
   }
 ]

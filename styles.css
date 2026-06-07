@@ -389,6 +389,10 @@ ol {
   border-bottom: 1px solid var(--line);
 }
 
+.research-theme-media[data-fit="contain"] {
+  background: #ffffff;
+}
+
 .research-theme-media img,
 .research-theme-placeholder {
   position: absolute;
@@ -403,6 +407,10 @@ ol {
   object-fit: cover;
   object-position: center;
   transition: opacity 160ms ease;
+}
+
+.research-theme-media[data-fit="contain"] img {
+  padding: 0.55rem;
 }
 
 .research-theme-media img.is-loaded {
