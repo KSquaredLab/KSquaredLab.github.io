@@ -127,7 +127,13 @@ Each person has fields like:
     "Survival analysis",
     "Biomedical AI"
   ],
-  "bio": "Short profile text."
+  "bio": "Short profile text.",
+  "background": [
+    {
+      "label": "Education",
+      "value": "Degree or training summary"
+    }
+  ]
 }
 ```
 
@@ -143,6 +149,7 @@ To update a member, edit the relevant fields:
 - `photo`
 - `researchInterests`
 - `bio`
+- `background` for compact PI background items, such as current position, training, education, and research focus
 
 Do not remove the quotation marks or commas unless you are comfortable editing JSON. If the file is invalid JSON, the People section may not load.
 

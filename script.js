@@ -48,6 +48,25 @@ const createAvatar = (person) => {
   return createElement("div", "person-placeholder", initialsFor(person.name));
 };
 
+const createPersonBackground = (items = []) => {
+  const validItems = items.filter((item) => item?.label && item?.value);
+  if (!validItems.length) return null;
+
+  const background = createElement("div", "person-background");
+  background.appendChild(createElement("h5", "", "Background"));
+
+  const list = createElement("dl", "person-background-list");
+  validItems.forEach((item) => {
+    const row = createElement("div", "person-background-row");
+    row.appendChild(createElement("dt", "", item.label));
+    row.appendChild(createElement("dd", "", item.value));
+    list.appendChild(row);
+  });
+
+  background.appendChild(list);
+  return background;
+};
+
 const createPersonCard = (person, groupKey) => {
   const isPrincipalInvestigator = groupKey === "principalInvestigator";
   const card = createElement(
@@ -90,6 +109,9 @@ const createPersonCard = (person, groupKey) => {
   if (person.bio) {
     details.appendChild(createElement("p", "person-bio", person.bio));
   }
+
+  const background = createPersonBackground(person.background || []);
+  if (background) details.appendChild(background);
 
   card.appendChild(createAvatar(person));
   card.appendChild(details);
