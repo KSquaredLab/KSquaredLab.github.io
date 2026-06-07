@@ -11,6 +11,7 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 - `script.js` loads and renders the People section from `people.json`.
 - `people.json` stores lab member names, roles, departments, interests, bios, email fields, and optional photo paths.
 - `images/people/` is prepared for future profile photos.
+- `images/people/kangjin-kim.jpg` is the current PI profile photo.
 
 ## 1. How to Enable GitHub Pages
 
@@ -37,6 +38,8 @@ Common sections to update:
 - Join Us: edit the `#join` section.
 - News: edit the `#news` section.
 - Contact: edit the `#contact` section.
+
+The publication list is currently written directly in the `#publications` section of `index.html`. To add a new publication, add a new `<li>` item inside the relevant `citation-list`.
 
 After editing, commit and push the changes to GitHub. GitHub Pages will update automatically after deployment finishes.
 
@@ -111,6 +114,7 @@ Do not upload private personal information, including:
 - Personal identification numbers
 - Private family information
 - Sensitive health information
+- Full CV files that contain references, private contact details, or other information that has not been checked for public sharing
 - Any private information that a student has not explicitly agreed to publish
 
 For students, do not add email addresses unless the student has agreed to make the email public. It is fine to leave the `email` field blank.
