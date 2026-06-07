@@ -26,9 +26,16 @@ const initialsFor = (name = "") =>
     .toUpperCase();
 
 const fetchJson = async (path) => {
-  const response = await fetch(path, { cache: "no-cache" });
-  if (!response.ok) throw new Error(`Could not load ${path}`);
-  return response.json();
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 8000);
+
+  try {
+    const response = await fetch(path, { cache: "no-cache", signal: controller.signal });
+    if (!response.ok) throw new Error(`Could not load ${path}`);
+    return response.json();
+  } finally {
+    window.clearTimeout(timeout);
+  }
 };
 
 const createAvatar = (person) => {
