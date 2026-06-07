@@ -729,10 +729,21 @@ ol {
   min-width: 0;
 }
 
+.person-background-row:first-child {
+  padding: 0.55rem 0.65rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
 .person-background-list dt {
   color: var(--teal);
   font-size: 0.78rem;
   font-weight: 850;
+}
+
+.person-background-row:first-child dt {
+  color: var(--navy);
 }
 
 .person-background-list dd {
