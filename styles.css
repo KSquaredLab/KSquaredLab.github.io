@@ -135,7 +135,8 @@ ol {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  min-width: max-content;
+  min-width: 0;
+  max-width: 100%;
   color: var(--navy);
 }
 
@@ -160,6 +161,7 @@ ol {
 .brand-text {
   display: grid;
   gap: 0.05rem;
+  min-width: 0;
   font-weight: 760;
   line-height: 1.2;
 }
