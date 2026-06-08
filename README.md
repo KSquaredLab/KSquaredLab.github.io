@@ -16,7 +16,7 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 - `people/[person-name]/profile.json` stores each member's name, role, department, interests, bio, email field, and optional photo path.
 - `people/[person-name]/` can also store that member's profile photo.
 - `people/kangjin-kim/kangjin-kim.jpg` is the current PI profile photo used by the People section.
-- `gallery.json` stores Lab Life gallery entries.
+- `gallery.json` stores Lab Life event groups and photo lists.
 - `images/gallery/` stores Lab Life photos.
 - `images/hero/` stores the homepage visual panel images and composed hero background.
 - `images/research/` stores web-ready figure excerpts used in the Research section.
@@ -241,30 +241,45 @@ Example:
 
 If `photo` is empty or the image path is incorrect, the website will show a simple placeholder avatar instead of a broken image.
 
-## 10. How to Add Lab Life Photos
+## 10. How to Add Lab Life Events
 
-The Lab Life section is rendered from `gallery.json`. To add a new photo:
+The Lab Life section is rendered from `gallery.json`. The homepage shows one card per event or activity. Clicking that card opens a simple gallery modal with all photos listed under that event.
 
-1. Add a photo file to `images/gallery/`.
-2. Use a simple lowercase filename with hyphens, such as `conference-presentation-2026.jpg`.
-3. Add a new entry to `gallery.json` with `title`, `date`, `caption`, `image`, and `alt`.
-4. Commit and push changes.
-5. Avoid uploading private, embarrassing, or low-quality photos.
-6. Confirm that people in the photo are comfortable with the photo being posted on the public lab website.
+To add a new Lab Life event:
 
-Example `gallery.json` entry:
+1. Add photos to `images/gallery/`.
+2. Use simple lowercase filenames with hyphens, such as `lab-gathering-2026-01.jpg`.
+3. Add one event object to `gallery.json`.
+4. Set a `cover` image for the event card.
+5. Add all related photos under the `photos` array.
+6. Commit and push changes.
+7. Avoid uploading duplicate or near-duplicate photos as separate homepage cards.
+8. Confirm that people shown in the photos are comfortable with public posting.
+
+Example `gallery.json` event:
 
 ```json
 {
-  "title": "Conference Presentation",
+  "title": "Conference Award Ceremony",
   "date": "2026",
-  "caption": "Lab members presenting research at an academic conference.",
-  "image": "images/gallery/conference-presentation-2026.jpg",
-  "alt": "Lab member presenting research at a conference"
+  "caption": "Recognition at an academic conference for student research.",
+  "cover": "images/gallery/conference-award-2026-01.jpg",
+  "photos": [
+    {
+      "src": "images/gallery/conference-award-2026-01.jpg",
+      "alt": "Award ceremony at an academic conference"
+    },
+    {
+      "src": "images/gallery/conference-award-2026-02.jpg",
+      "alt": "Lab member receiving recognition during a conference"
+    }
+  ]
 }
 ```
 
-If the image path is missing or incorrect, the website shows a simple placeholder card instead of a broken image. To hide the Lab Life section temporarily, set `gallery.json` to an empty array:
+To change the cover image for an event, update the event's `cover` path. The cover should usually be one of the images already listed in that event's `photos` array.
+
+If the cover image path is missing or incorrect, the website shows a simple placeholder card instead of a broken image. To hide the Lab Life section temporarily, set `gallery.json` to an empty array:
 
 ```json
 []
@@ -288,7 +303,7 @@ Do not upload private personal information, including:
 
 For students, do not add email addresses unless the student has agreed to make the email public. It is fine to leave the `email` field blank.
 
-Before uploading photos of students or collaborators, confirm that the people shown are comfortable with the photo being posted publicly on the lab website. Do not upload student ID cards, private documents, phone numbers, birth dates, or sensitive personal information.
+Before uploading photos of students or collaborators, confirm that the people shown are comfortable with the photo being posted publicly on the lab website. Do not upload photos containing private documents, student IDs, phone numbers, birth dates, or sensitive personal information.
 
 ## Local Preview
 

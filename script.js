@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260608-lab-life-events-media";
+const dataVersion = "20260608-gallery-events";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -337,24 +337,232 @@ if (researchContainer) {
     .catch(renderResearchError);
 }
 
+const galleryState = {
+  modal: null,
+  event: null,
+  photos: [],
+  index: 0,
+  previousFocus: null,
+  elements: {}
+};
+
+const getGalleryPhotos = (item = {}) => {
+  const photos = Array.isArray(item.photos) ? item.photos.filter((photo) => photo?.src) : [];
+  if (photos.length) return photos;
+
+  const fallbackSrc = item.cover || item.image;
+  return fallbackSrc
+    ? [{ src: fallbackSrc, alt: item.alt || item.title || "Lab activity photo" }]
+    : [];
+};
+
+const getGalleryCover = (item = {}) => item.cover || getGalleryPhotos(item)[0]?.src || item.image || "";
+
+const getGalleryCoverAlt = (item = {}) => {
+  const cover = getGalleryCover(item);
+  const coverPhoto = getGalleryPhotos(item).find((photo) => photo.src === cover);
+  return coverPhoto?.alt || item.alt || item.title || "Lab activity photo";
+};
+
+const getPhotoCountLabel = (count) => `${count} photo${count === 1 ? "" : "s"}`;
+
 const createGalleryPlaceholder = (item) => {
   const placeholder = createElement("div", "gallery-placeholder");
   placeholder.setAttribute("role", "img");
-  placeholder.setAttribute("aria-label", item.alt || item.title || "Gallery image placeholder");
+  placeholder.setAttribute("aria-label", getGalleryCoverAlt(item));
   placeholder.appendChild(createElement("span", "gallery-placeholder-label", item.title || "Lab Life"));
   return placeholder;
 };
 
+const showGalleryPhoto = (direction) => {
+  if (!galleryState.photos.length) return;
+  galleryState.index = (galleryState.index + direction + galleryState.photos.length) % galleryState.photos.length;
+  updateGalleryModal();
+};
+
+const closeGalleryModal = () => {
+  if (!galleryState.modal || galleryState.modal.hidden) return;
+
+  galleryState.modal.hidden = true;
+  document.body.classList.remove("gallery-modal-open");
+  if (galleryState.previousFocus?.focus) galleryState.previousFocus.focus();
+};
+
+const updateGalleryModal = () => {
+  const photo = galleryState.photos[galleryState.index];
+  if (!photo) return;
+
+  const { title, date, image, placeholder, caption, count, prevButton, nextButton, thumbnails } =
+    galleryState.elements;
+  const eventTitle = galleryState.event?.title || "Lab Life";
+
+  title.textContent = eventTitle;
+  date.textContent = galleryState.event?.date || "";
+  image.alt = photo.alt || eventTitle;
+  image.style.display = "none";
+  placeholder.hidden = false;
+  placeholder.textContent = eventTitle;
+  image.src = photo.src;
+  if (image.complete && image.naturalWidth > 0) {
+    image.style.display = "";
+    placeholder.hidden = true;
+  }
+
+  const captionText = photo.caption || photo.alt || galleryState.event?.caption || "";
+  caption.textContent = captionText;
+  caption.hidden = !captionText;
+  count.textContent = `${galleryState.index + 1} / ${galleryState.photos.length}`;
+
+  const hasMultiplePhotos = galleryState.photos.length > 1;
+  prevButton.hidden = !hasMultiplePhotos;
+  nextButton.hidden = !hasMultiplePhotos;
+
+  thumbnails.innerHTML = "";
+  thumbnails.hidden = !hasMultiplePhotos;
+  if (hasMultiplePhotos) {
+    galleryState.photos.forEach((item, index) => {
+      const thumbnail = createElement("button", "gallery-modal-thumb");
+      thumbnail.type = "button";
+      thumbnail.setAttribute("aria-label", `View photo ${index + 1}`);
+      if (index === galleryState.index) {
+        thumbnail.classList.add("is-active");
+        thumbnail.setAttribute("aria-current", "true");
+      }
+
+      const thumbnailImage = document.createElement("img");
+      thumbnailImage.alt = "";
+      thumbnailImage.loading = "lazy";
+      thumbnailImage.onerror = () => {
+        thumbnail.classList.add("is-missing");
+        thumbnailImage.remove();
+        thumbnail.textContent = String(index + 1);
+      };
+      thumbnailImage.src = item.src;
+      thumbnail.appendChild(thumbnailImage);
+      thumbnail.addEventListener("click", () => {
+        galleryState.index = index;
+        updateGalleryModal();
+      });
+      thumbnails.appendChild(thumbnail);
+    });
+  }
+};
+
+const createGalleryModal = () => {
+  const modal = createElement("div", "gallery-modal");
+  modal.hidden = true;
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "gallery-modal-title");
+
+  const backdrop = createElement("div", "gallery-modal-backdrop");
+  const dialog = createElement("div", "gallery-modal-dialog");
+
+  const header = createElement("div", "gallery-modal-header");
+  const heading = createElement("div", "gallery-modal-heading");
+  const title = createElement("h3", "");
+  title.id = "gallery-modal-title";
+  const date = createElement("div", "gallery-modal-date");
+  const closeButton = createElement("button", "gallery-modal-close", "Close");
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close gallery");
+
+  heading.appendChild(title);
+  heading.appendChild(date);
+  header.appendChild(heading);
+  header.appendChild(closeButton);
+
+  const media = createElement("div", "gallery-modal-media");
+  const prevButton = createElement("button", "gallery-modal-nav gallery-modal-prev", "Prev");
+  const nextButton = createElement("button", "gallery-modal-nav gallery-modal-next", "Next");
+  prevButton.type = "button";
+  nextButton.type = "button";
+  prevButton.setAttribute("aria-label", "Previous photo");
+  nextButton.setAttribute("aria-label", "Next photo");
+
+  const imageWrap = createElement("div", "gallery-modal-image-wrap");
+  const image = document.createElement("img");
+  const placeholder = createElement("div", "gallery-modal-placeholder", "Photo unavailable");
+  image.onload = () => {
+    if (image.naturalWidth > 0) {
+      image.style.display = "";
+      placeholder.hidden = true;
+    }
+  };
+  image.onerror = () => {
+    image.style.display = "none";
+    placeholder.hidden = false;
+  };
+  imageWrap.appendChild(image);
+  imageWrap.appendChild(placeholder);
+
+  media.appendChild(prevButton);
+  media.appendChild(imageWrap);
+  media.appendChild(nextButton);
+
+  const caption = createElement("p", "gallery-modal-caption");
+  const footer = createElement("div", "gallery-modal-footer");
+  const count = createElement("div", "gallery-modal-count");
+  const thumbnails = createElement("div", "gallery-modal-thumbnails");
+  footer.appendChild(count);
+  footer.appendChild(thumbnails);
+
+  dialog.appendChild(header);
+  dialog.appendChild(media);
+  dialog.appendChild(caption);
+  dialog.appendChild(footer);
+  modal.appendChild(backdrop);
+  modal.appendChild(dialog);
+  document.body.appendChild(modal);
+
+  backdrop.addEventListener("click", closeGalleryModal);
+  closeButton.addEventListener("click", closeGalleryModal);
+  prevButton.addEventListener("click", () => showGalleryPhoto(-1));
+  nextButton.addEventListener("click", () => showGalleryPhoto(1));
+
+  galleryState.elements = {
+    title,
+    date,
+    image,
+    placeholder,
+    caption,
+    count,
+    prevButton,
+    nextButton,
+    closeButton,
+    thumbnails
+  };
+  galleryState.modal = modal;
+};
+
+const openGalleryModal = (item) => {
+  const photos = getGalleryPhotos(item);
+  if (!photos.length) return;
+
+  if (!galleryState.modal) createGalleryModal();
+  galleryState.event = item;
+  galleryState.photos = photos;
+  galleryState.index = 0;
+  galleryState.previousFocus = document.activeElement;
+  updateGalleryModal();
+
+  galleryState.modal.hidden = false;
+  document.body.classList.add("gallery-modal-open");
+  galleryState.elements.closeButton.focus();
+};
+
 const createGalleryCard = (item) => {
   const card = createElement("article", "gallery-card");
+  const photos = getGalleryPhotos(item);
+  const cover = getGalleryCover(item);
   const media = createElement("div", "gallery-media");
 
   const placeholder = createGalleryPlaceholder(item);
   media.appendChild(placeholder);
 
-  if (item.image) {
+  if (cover) {
     const image = document.createElement("img");
-    image.alt = item.alt || item.title || "Lab activity photo";
+    image.alt = getGalleryCoverAlt(item);
     image.loading = "eager";
     image.style.display = "none";
     image.onload = () => {
@@ -366,7 +574,7 @@ const createGalleryCard = (item) => {
     image.onerror = () => {
       image.remove();
     };
-    image.src = item.image;
+    image.src = cover;
     media.appendChild(image);
   }
 
@@ -376,6 +584,24 @@ const createGalleryCard = (item) => {
   body.appendChild(createElement("h3", "", item.title || "Lab Life"));
   if (meta) body.appendChild(createElement("div", "gallery-date", meta));
   if (item.caption) body.appendChild(createElement("p", "", item.caption));
+
+  const footer = createElement("div", "gallery-card-footer");
+  footer.appendChild(createElement("span", "gallery-count", getPhotoCountLabel(photos.length)));
+  if (photos.length) footer.appendChild(createElement("span", "gallery-action", "View photos"));
+  body.appendChild(footer);
+
+  if (photos.length) {
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `${item.title || "Lab Life"}: view ${getPhotoCountLabel(photos.length)}`);
+    card.addEventListener("click", () => openGalleryModal(item));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openGalleryModal(item);
+      }
+    });
+  }
 
   card.appendChild(media);
   card.appendChild(body);
@@ -405,6 +631,18 @@ if (galleryContainer) {
     .then(renderGallery)
     .catch(renderGalleryError);
 }
+
+document.addEventListener("keydown", (event) => {
+  if (!galleryState.modal || galleryState.modal.hidden) return;
+
+  if (event.key === "Escape") {
+    closeGalleryModal();
+  } else if (event.key === "ArrowLeft") {
+    showGalleryPhoto(-1);
+  } else if (event.key === "ArrowRight") {
+    showGalleryPhoto(1);
+  }
+});
 
 const createProjectCard = (project) => {
   const card = createElement("article", "project-card");

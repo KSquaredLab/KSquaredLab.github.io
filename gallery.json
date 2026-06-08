@@ -3,42 +3,40 @@
     "title": "Lab Gathering",
     "date": "2026",
     "caption": "Lab members gathering after a research milestone and shared lab activity.",
-    "image": "images/gallery/lab-gathering-2026.jpg",
-    "alt": "K squared lab members gathered in the lab"
-  },
-  {
-    "title": "Lab Celebration",
-    "date": "2026",
-    "caption": "A warm lab moment celebrating student progress and research community.",
-    "image": "images/gallery/lab-celebration-2026.jpg",
-    "alt": "Lab members celebrating together"
-  },
-  {
-    "title": "Everyday Lab Moment",
-    "date": "2026",
-    "caption": "Students and the PI sharing a relaxed moment in the lab space.",
-    "image": "images/gallery/lab-life-group-moment-2026.jpg",
-    "alt": "Lab members posing together in the lab"
+    "cover": "images/gallery/lab-gathering-2026.jpg",
+    "photos": [
+      {
+        "src": "images/gallery/lab-gathering-2026.jpg",
+        "alt": "K squared lab members gathered in the lab"
+      },
+      {
+        "src": "images/gallery/lab-celebration-2026.jpg",
+        "alt": "Lab members celebrating together"
+      },
+      {
+        "src": "images/gallery/lab-life-group-moment-2026.jpg",
+        "alt": "Students and the PI sharing a relaxed lab moment"
+      }
+    ]
   },
   {
     "title": "Conference Award Ceremony",
     "date": "May 2026",
     "caption": "Recognition at an academic conference for research presentation.",
-    "image": "images/gallery/conference-award-ceremony-2026.jpg",
-    "alt": "Conference award ceremony for a research presentation"
-  },
-  {
-    "title": "Conference Recognition",
-    "date": "May 2026",
-    "caption": "A lab member receiving recognition during a conference session.",
-    "image": "images/gallery/conference-recognition-2026.jpg",
-    "alt": "Lab member receiving conference recognition"
-  },
-  {
-    "title": "Academic Conference Moment",
-    "date": "May 2026",
-    "caption": "Conference photo after a research presentation award.",
-    "image": "images/gallery/conference-award-photo-2026.jpg",
-    "alt": "Academic conference photo after an award presentation"
+    "cover": "images/gallery/conference-award-ceremony-2026.jpg",
+    "photos": [
+      {
+        "src": "images/gallery/conference-award-ceremony-2026.jpg",
+        "alt": "Conference award ceremony for a research presentation"
+      },
+      {
+        "src": "images/gallery/conference-recognition-2026.jpg",
+        "alt": "Lab member receiving conference recognition"
+      },
+      {
+        "src": "images/gallery/conference-award-photo-2026.jpg",
+        "alt": "Academic conference photo after an award presentation"
+      }
+    ]
   }
 ]
