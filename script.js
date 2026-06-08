@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260608-seoyoung";
+const dataVersion = "20260608-lab-life-events-media";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -355,13 +355,19 @@ const createGalleryCard = (item) => {
   if (item.image) {
     const image = document.createElement("img");
     image.alt = item.alt || item.title || "Lab activity photo";
-    image.loading = "lazy";
+    image.loading = "eager";
+    image.style.display = "none";
     image.onload = () => {
       if (image.naturalWidth > 0 && placeholder.isConnected) {
+        image.style.display = "";
         placeholder.replaceWith(image);
       }
     };
+    image.onerror = () => {
+      image.remove();
+    };
     image.src = item.image;
+    media.appendChild(image);
   }
 
   const body = createElement("div", "gallery-card-body");
