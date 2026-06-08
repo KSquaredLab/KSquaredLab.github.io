@@ -3,8 +3,8 @@
     "title": "Statistical Methods for Biomedical Data",
     "titleKo": "의생명 데이터 통계 방법론",
     "description": [
-      "We develop statistical methods for complex biomedical data, including high-dimensional, structured, and survival outcomes.",
-      "Our work emphasizes rigorous inference, reproducible analysis, and practical tools for biomedical research."
+      "We develop statistical methods for high-dimensional, structured, and survival outcomes.",
+      "Our work emphasizes inference, reproducible analysis, and practical tools."
     ],
     "image": "images/hero/statistical-methods-panel.jpg",
     "alt": "Power curves from microbiome statistical method evaluation",
@@ -19,8 +19,8 @@
     "title": "Multi-omics and Epigenetics",
     "titleKo": "멀티오믹스와 후성유전학",
     "description": [
-      "We analyze molecular data such as DNA methylation, genetic variation, and other omics layers to study disease-related biological signals.",
-      "We are especially interested in integrative approaches that connect molecular profiles to clinical phenotypes."
+      "We analyze DNA methylation, genetic variation, and other omics data.",
+      "We link molecular profiles with clinical phenotypes."
     ],
     "image": "images/hero/omics-analysis-panel.jpg",
     "alt": "Omics analysis scatter plot from biomedical research",
@@ -36,8 +36,8 @@
     "title": "Statistical Genetics and Rare Variant Analysis",
     "titleKo": "통계유전학과 희귀변이 분석",
     "description": [
-      "We study genetic architecture and rare variant signals using statistically principled approaches for sequencing and high-dimensional association data.",
-      "This work connects statistical genetics, variant aggregation, and reproducible analysis workflows for biomedical discovery."
+      "We study genetic architecture and rare variant signals in sequencing data.",
+      "Our work includes variant aggregation and reproducible association analysis."
     ],
     "image": "images/research/genome-biology-fig2-regional-gwas.jpg",
     "alt": "Cropped Fig. 2 regional GWAS panels from Genome Biology whole-genome sequence analysis of pulmonary function and COPD",
@@ -54,7 +54,7 @@
     "titleKo": "호흡기 질환 및 COPD 데이터 사이언스",
     "description": [
       "We study respiratory disease using genetic, imaging, omics, and clinical data.",
-      "Our work includes COPD-related phenotypes such as lung function, emphysema, mucus plugging, and disease progression."
+      "Topics include lung function, emphysema, mucus plugging, and disease progression."
     ],
     "image": "images/research/copd-ct-mucus.jpg",
     "alt": "Chest CT examples of mucus plugs from COPD research",
@@ -71,7 +71,7 @@
     "titleKo": "의생명 AI와 예측 모델링",
     "description": [
       "We develop and evaluate prediction models for biomedical and clinical outcomes.",
-      "The lab is interested in survival prediction, interpretable machine learning, and robust validation of AI-based biomedical models."
+      "Topics include survival prediction, interpretable machine learning, and model validation."
     ],
     "image": "images/research/gut-liver-fig5-survival-curves.jpg",
     "alt": "Cropped Fig. 5 Kaplan-Meier survival curves from a gut microbe-derived extracellular vesicle study",
@@ -87,8 +87,8 @@
     "title": "Environmental Health Data Science",
     "titleKo": "환경보건 데이터 사이언스",
     "description": [
-      "We apply statistical and data science methods to environmental health and policy-related problems.",
-      "This includes study design, survey analysis, sampling strategy, and quantitative evaluation of stakeholder perceptions and policy feasibility."
+      "We apply statistical methods to environmental health and policy data.",
+      "Topics include study design, survey analysis, sampling, and stakeholder perception."
     ],
     "image": "images/research/environmental-health-network.jpg",
     "alt": "Network visualization used as a research thumbnail for environmental health data science",
