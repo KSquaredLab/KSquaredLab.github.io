@@ -3,8 +3,12 @@
     "title": "Lab Gathering",
     "date": "2026",
     "caption": "Lab members gathering after a research milestone and shared lab activity.",
-    "cover": "images/gallery/lab-gathering-2026.jpg",
+    "cover": "images/gallery/lab-gathering-award-2026.jpg",
     "photos": [
+      {
+        "src": "images/gallery/lab-gathering-award-2026.jpg",
+        "alt": "Lab members celebrating a research milestone in the lab"
+      },
       {
         "src": "images/gallery/lab-gathering-2026.jpg",
         "alt": "K squared lab members gathered in the lab"
