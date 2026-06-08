@@ -691,8 +691,8 @@ ol {
 }
 
 .person-card-member {
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 1.2rem;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 1.25rem;
   padding: 1rem;
 }
 
@@ -714,8 +714,8 @@ ol {
 
 .person-card-member .person-photo,
 .person-card-member .person-placeholder {
-  width: 160px;
-  height: 180px;
+  width: 190px;
+  height: 210px;
   border-radius: 8px;
 }
 
