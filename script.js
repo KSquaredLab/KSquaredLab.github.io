@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260608-junjae";
+const dataVersion = "20260608-pi-metadata";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -63,7 +63,6 @@ const createPersonBackground = (items = []) => {
   if (!validItems.length) return null;
 
   const background = createElement("div", "person-background");
-  background.appendChild(createElement("h5", "", "Background"));
 
   const list = createElement("dl", "person-background-list");
   validItems.forEach((item) => {

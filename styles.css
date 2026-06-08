@@ -781,21 +781,7 @@ ol {
 
 .person-background {
   max-width: 780px;
-  margin-top: 0.85rem;
-  padding: 0.85rem 1rem 0.8rem;
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-left: 2px solid var(--teal);
-  border-radius: var(--radius);
-}
-
-.person-background h5 {
-  margin: 0 0 0.5rem;
-  color: var(--navy);
-  font-size: 0.76rem;
-  font-weight: 850;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  margin-top: 0.75rem;
 }
 
 .person-background-list {
@@ -803,13 +789,12 @@ ol {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
   margin: 0;
-  padding-top: 0.55rem;
   border-top: 1px solid var(--line);
 }
 
 .person-background-row {
   min-width: 0;
-  padding: 0.05rem 0.9rem 0.05rem 0;
+  padding: 0.55rem 0.9rem 0.1rem 0;
 }
 
 .person-background-row + .person-background-row {
