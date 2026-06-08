@@ -739,16 +739,6 @@ ol {
   font-weight: 800;
 }
 
-.person-interests {
-  margin-top: 0.65rem;
-  padding: 0.58rem 0.7rem;
-  color: var(--ink);
-  background: #fbfcfd;
-  border: 1px solid var(--line);
-  border-left: 3px solid rgba(15, 118, 110, 0.42);
-  border-radius: 4px;
-}
-
 .person-bio {
   margin: 0.9rem 0 0;
   font-size: 0.95rem;
