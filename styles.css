@@ -257,11 +257,11 @@ ol {
 
 .eyebrow {
   margin-bottom: 0.75rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  text-transform: none;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .tagline {
