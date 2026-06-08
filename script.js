@@ -2,6 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
+const dataVersion = "20260608-pi-bio";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -28,9 +29,11 @@ const initialsFor = (name = "") =>
 const fetchJson = async (path) => {
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 8000);
+  const separator = path.includes("?") ? "&" : "?";
+  const cacheSafePath = `${path}${separator}v=${dataVersion}`;
 
   try {
-    const response = await fetch(path, { cache: "no-cache", signal: controller.signal });
+    const response = await fetch(cacheSafePath, { cache: "no-cache", signal: controller.signal });
     if (!response.ok) throw new Error(`Could not load ${path}`);
     return response.json();
   } finally {
