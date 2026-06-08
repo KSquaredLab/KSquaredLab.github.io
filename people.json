@@ -97,18 +97,18 @@
     {
       "name": "Seoyoung Bae",
       "koreanName": "배서영",
-      "role": "Undergraduate Research Assistant",
+      "role": "Undergraduate Student",
       "title": "",
       "department": "Department of Applied Statistics, Gachon University",
-      "email": "",
-      "photo": "",
+      "email": "s44v44t44@gachon.ac.kr",
+      "photo": "people/seoyoung-bae/seoyoung-bae.jpeg",
       "researchInterests": [
-        "Bioinformatics",
-        "Data science",
-        "Statistical modeling",
-        "Biomedical data analysis"
+        "Statistical learning",
+        "Microbiome data analysis",
+        "Integrative biomedical data analysis",
+        "Environmental health data analysis"
       ],
-      "bio": "Seoyoung is interested in learning statistical and computational methods for analyzing complex biomedical data."
+      "bio": "Seoyoung is an undergraduate student in the Department of Applied Statistics at Gachon University. Her research interests include statistical learning, microbiome data analysis, and integrative analysis of biomedical and environmental health data."
     }
   ]
 }
