@@ -24,16 +24,16 @@ The site is intentionally simple: plain HTML, CSS, a small JavaScript file, and 
 
 ## 1. How to Enable GitHub Pages
 
-1. Open the repository on GitHub: `https://github.com/testksquared/testksquared.github.io`.
+1. Open the repository on GitHub: `https://github.com/KSquaredLab/KSquaredLab.github.io`.
 2. Go to **Settings**.
 3. Open **Pages** in the left sidebar.
 4. Under **Build and deployment**, choose **Deploy from a branch**.
 5. Select the `main` branch and the `/ (root)` folder.
 6. Save the settings.
 7. After GitHub finishes deploying, the site should be available at:
-   `https://testksquared.github.io`
+   `https://ksquaredlab.github.io`
 
-For a repository named `testksquared.github.io`, GitHub Pages usually serves the site from the root of the `main` branch.
+For a repository named `KSquaredLab.github.io`, GitHub Pages usually serves the site from the root of the `main` branch.
 
 ## 2. How to Edit the Main Website Text
 
