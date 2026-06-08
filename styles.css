@@ -608,18 +608,12 @@ ol {
 
 #people .section-heading {
   max-width: none;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.45rem;
 }
 
 #people .section-heading h2 {
   font-size: 2.45rem;
   letter-spacing: 0;
-}
-
-#people .section-heading p:last-child {
-  max-width: 820px;
 }
 
 .people-group h3 {
@@ -633,13 +627,6 @@ ol {
   font-weight: 650;
   letter-spacing: 0;
   text-transform: none;
-}
-
-.people-group h3::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: var(--line);
 }
 
 .people-grid {
