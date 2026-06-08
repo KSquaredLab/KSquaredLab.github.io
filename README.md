@@ -147,7 +147,7 @@ Edit that member's folder under `people/`.
 Examples:
 
 - PI: `people/kangjin-kim/profile.json`
-- Junjae Won: `people/junjae-won/profile.json`
+- Jun-Jae Won: `people/junjae-won/profile.json`
 - Jihyeon Lee: `people/jihyun-lee/profile.json`
 - Eunjae Han: `people/eunjae-han/profile.json`
 - Seoyoung Bae: `people/seoyoung-bae/profile.json`
@@ -156,7 +156,7 @@ Each person has fields like:
 
 ```json
 {
-  "name": "Junjae Won",
+  "name": "Jun-Jae Won",
   "koreanName": "원준재",
   "role": "Master’s Student",
   "title": "",
@@ -169,6 +169,12 @@ Each person has fields like:
     "Biomedical AI"
   ],
   "bio": "Short profile text.",
+  "links": [
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=example"
+    }
+  ],
   "background": [
     {
       "label": "Education",
@@ -190,6 +196,7 @@ To update a member, edit the relevant fields:
 - `photo`
 - `researchInterests`
 - `bio`
+- `links` for public profile pages such as Google Scholar, ORCID, GitHub, LinkedIn, or a personal homepage
 - `background` for compact PI background items, such as current position, training, education, and research focus
 
 Do not remove the quotation marks or commas unless you are comfortable editing JSON. If the file is invalid JSON, the People section may not load.

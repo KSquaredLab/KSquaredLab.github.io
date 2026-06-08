@@ -11,8 +11,8 @@
       "key": "graduateStudents",
       "title": "Graduate Students",
       "profiles": [
-        "people/junjae-won/profile.json",
         "people/jihyun-lee/profile.json",
+        "people/junjae-won/profile.json",
         "people/eunjae-han/profile.json"
       ]
     },
@@ -22,11 +22,6 @@
       "profiles": [
         "people/seoyoung-bae/profile.json"
       ]
-    },
-    {
-      "key": "alumni",
-      "title": "Alumni",
-      "profiles": []
     }
   ]
 }

@@ -741,9 +741,14 @@ ol {
 .person-meta,
 .person-training,
 .person-email,
+.person-links,
 .person-interests {
   color: var(--muted);
   font-size: 0.93rem;
+}
+
+.person-links a {
+  font-weight: 750;
 }
 
 .person-training {

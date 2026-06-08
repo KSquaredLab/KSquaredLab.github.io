@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260608-pi-bio";
+const dataVersion = "20260608-junjae";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -77,6 +77,26 @@ const createPersonBackground = (items = []) => {
   return background;
 };
 
+const createPersonLinks = (links = []) => {
+  const validLinks = links.filter((link) => link?.label && link?.url);
+  if (!validLinks.length) return null;
+
+  const container = createElement("div", "person-links");
+  container.append("Links: ");
+
+  validLinks.forEach((link, index) => {
+    if (index > 0) container.append(" · ");
+
+    const anchor = createElement("a", "", link.label);
+    anchor.href = link.url;
+    anchor.target = "_blank";
+    anchor.rel = "noopener";
+    container.appendChild(anchor);
+  });
+
+  return container;
+};
+
 const createPersonCard = (person, groupKey) => {
   const isPrincipalInvestigator = groupKey === "principalInvestigator";
   const card = createElement(
@@ -109,6 +129,9 @@ const createPersonCard = (person, groupKey) => {
   } else {
     details.appendChild(createElement("div", "person-email", "Email available upon request"));
   }
+
+  const links = createPersonLinks(person.links || []);
+  if (links) details.appendChild(links);
 
   if (person.researchInterests?.length) {
     details.appendChild(
