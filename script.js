@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260609-concise-copy";
+const dataVersion = "20260609-eunjae-han";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },

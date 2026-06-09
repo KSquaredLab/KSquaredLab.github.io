@@ -82,15 +82,23 @@
       "role": "Master’s Student",
       "title": "",
       "department": "Department of Applied Statistics, Gachon University",
-      "email": "",
-      "photo": "",
+      "email": "ejhan02@gachon.ac.kr",
+      "photo": "people/eunjae-han/eunjae-han.jpg",
       "researchInterests": [
-        "Multi-omics",
-        "DNA methylation",
-        "Bioinformatics",
-        "Statistical genetics"
+        "Biostatistics",
+        "Data analysis",
+        "Healthcare decision-making",
+        "Artificial intelligence",
+        "Digital wellness",
+        "Health risk prediction"
       ],
-      "bio": "Her research interests include bioinformatics and statistical methods for studying omics data and disease-related biomarkers."
+      "bio": "Her research interests include clinical statistics, digital wellness, and individual health risk prediction using large public health data. She is interested in modeling non-linear relationships between lifestyle factors such as sleep and nutrition and metabolic syndrome.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/EunjaeHan"
+        }
+      ]
     }
   ],
   "undergraduateResearchers": [
