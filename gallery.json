@@ -42,5 +42,33 @@
         "alt": "Academic conference photo after an award presentation"
       }
     ]
+  },
+  {
+    "title": "Conference in Jeju",
+    "date": "May 2026",
+    "caption": "Students joined an academic conference in Jeju and spent time together between sessions.",
+    "cover": "images/gallery/jeju-conference-group-2026.jpg",
+    "photos": [
+      {
+        "src": "images/gallery/jeju-conference-group-2026.jpg",
+        "alt": "Students smiling together at the beach during a conference trip in Jeju"
+      },
+      {
+        "src": "images/gallery/jeju-conference-lab-time-2026.jpg",
+        "alt": "Lab members spending time together during a Jeju conference trip"
+      },
+      {
+        "src": "images/gallery/jeju-conference-sand-note-2026.jpg",
+        "alt": "A beach message written in the sand during a Jeju conference trip"
+      },
+      {
+        "src": "images/gallery/jeju-conference-coast-2026.jpg",
+        "alt": "Coastal view during a conference trip in Jeju"
+      },
+      {
+        "src": "images/gallery/jeju-conference-street-2026.jpg",
+        "alt": "Street scene during a conference trip in Jeju"
+      }
+    ]
   }
 ]
