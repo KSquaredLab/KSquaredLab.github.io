@@ -1,25 +1,29 @@
 [
   {
-    "title": "Lab Gathering",
-    "date": "2026",
-    "caption": "Lab members gathering after a research milestone and shared lab activity.",
-    "cover": "images/gallery/lab-gathering-award-2026.jpg",
+    "title": "Conference in Jeju",
+    "date": "May 2026",
+    "caption": "Students joined an academic conference in Jeju and spent time together between sessions.",
+    "cover": "images/gallery/jeju-conference-sand-note-2026.jpg",
     "photos": [
       {
-        "src": "images/gallery/lab-gathering-award-2026.jpg",
-        "alt": "Lab members celebrating a research milestone in the lab"
+        "src": "images/gallery/jeju-conference-sand-note-2026.jpg",
+        "alt": "A beach message written in the sand during a Jeju conference trip"
       },
       {
-        "src": "images/gallery/lab-gathering-2026.jpg",
-        "alt": "K squared lab members gathered in the lab"
+        "src": "images/gallery/jeju-conference-coast-2026.jpg",
+        "alt": "Coastal view during a conference trip in Jeju"
       },
       {
-        "src": "images/gallery/lab-celebration-2026.jpg",
-        "alt": "Lab members celebrating together"
+        "src": "images/gallery/jeju-conference-group-2026.jpg",
+        "alt": "Students smiling together at the beach during a conference trip in Jeju"
       },
       {
-        "src": "images/gallery/lab-life-group-moment-2026.jpg",
-        "alt": "Students and the PI sharing a relaxed lab moment"
+        "src": "images/gallery/jeju-conference-lab-time-2026.jpg",
+        "alt": "Lab members spending time together during a Jeju conference trip"
+      },
+      {
+        "src": "images/gallery/jeju-conference-street-2026.jpg",
+        "alt": "Street scene during a conference trip in Jeju"
       }
     ]
   },
@@ -44,30 +48,26 @@
     ]
   },
   {
-    "title": "Conference in Jeju",
-    "date": "May 2026",
-    "caption": "Students joined an academic conference in Jeju and spent time together between sessions.",
-    "cover": "images/gallery/jeju-conference-sand-note-2026.jpg",
+    "title": "Lab Gathering",
+    "date": "2026",
+    "caption": "Lab members gathering after a research milestone and shared lab activity.",
+    "cover": "images/gallery/lab-gathering-award-2026.jpg",
     "photos": [
       {
-        "src": "images/gallery/jeju-conference-sand-note-2026.jpg",
-        "alt": "A beach message written in the sand during a Jeju conference trip"
+        "src": "images/gallery/lab-gathering-award-2026.jpg",
+        "alt": "Lab members celebrating a research milestone in the lab"
       },
       {
-        "src": "images/gallery/jeju-conference-group-2026.jpg",
-        "alt": "Students smiling together at the beach during a conference trip in Jeju"
+        "src": "images/gallery/lab-gathering-2026.jpg",
+        "alt": "K squared lab members gathered in the lab"
       },
       {
-        "src": "images/gallery/jeju-conference-lab-time-2026.jpg",
-        "alt": "Lab members spending time together during a Jeju conference trip"
+        "src": "images/gallery/lab-celebration-2026.jpg",
+        "alt": "Lab members celebrating together"
       },
       {
-        "src": "images/gallery/jeju-conference-coast-2026.jpg",
-        "alt": "Coastal view during a conference trip in Jeju"
-      },
-      {
-        "src": "images/gallery/jeju-conference-street-2026.jpg",
-        "alt": "Street scene during a conference trip in Jeju"
+        "src": "images/gallery/lab-life-group-moment-2026.jpg",
+        "alt": "Students and the PI sharing a relaxed lab moment"
       }
     ]
   }
