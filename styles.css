@@ -517,8 +517,6 @@ ol {
 .card,
 .project-card,
 .publication-item,
-.application-card,
-.korean-box,
 .contact-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -1119,86 +1117,44 @@ ol {
   overflow: hidden;
 }
 
-.join-section {
-  background: var(--navy);
-  color: rgba(255, 255, 255, 0.86);
+.students-content {
+  max-width: 820px;
 }
 
-.join-section h2,
-.join-section h3,
-.join-section .eyebrow {
-  color: var(--white);
-}
-
-.join-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.join-main {
+.students-copy {
   max-width: 760px;
 }
 
-.two-column {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.3rem;
-  margin-top: 1.6rem;
-}
-
-.check-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.check-list li {
-  position: relative;
-  padding-left: 1.45rem;
-  margin-bottom: 0.55rem;
-}
-
-.check-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.62rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--gold);
-  border-radius: 50%;
-}
-
-.application-card {
-  padding: 1.25rem;
-  color: var(--ink);
-}
-
-.application-card h3 {
-  color: var(--navy);
-}
-
-.application-card p {
+.students-copy p {
   color: var(--muted);
 }
 
-.application-card ol {
-  margin-bottom: 1.3rem;
-}
-
-.korean-box {
-  margin-top: 1.5rem;
-  padding: 1.5rem;
-  color: var(--ink);
-}
-
-.korean-box h3 {
+.student-contact-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
   color: var(--navy);
+  font-size: 0.94rem;
+  font-weight: 600;
 }
 
-.korean-box p:last-child {
+.student-contact-link:hover {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.student-note {
+  max-width: 780px;
+  margin-top: 1.35rem;
+  padding: 1rem 1.1rem;
+  background: #fbfcfd;
+  border-left: 2px solid rgba(15, 118, 110, 0.28);
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.student-note p:last-child {
   margin-bottom: 0;
 }
 
@@ -1276,7 +1232,6 @@ ol {
   }
 
   .hero-grid,
-  .join-layout,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1284,8 +1239,7 @@ ol {
   .research-theme-grid,
   .gallery-grid,
   .project-grid,
-  .people-grid,
-  .two-column {
+  .people-grid {
     grid-template-columns: 1fr;
   }
 }
