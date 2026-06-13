@@ -1117,12 +1117,31 @@ ol {
   overflow: hidden;
 }
 
-.students-content {
-  max-width: 820px;
+.students-section {
+  padding: 58px 0;
+  background: #fbfcfd;
+  border-block: 1px solid var(--line);
+}
+
+.students-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.students-heading h2 {
+  margin-bottom: 0.45rem;
+}
+
+.students-heading p {
+  max-width: 280px;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .students-copy {
-  max-width: 760px;
+  max-width: 790px;
 }
 
 .students-copy p {
@@ -1145,13 +1164,14 @@ ol {
 }
 
 .student-note {
-  max-width: 780px;
-  margin-top: 1.35rem;
-  padding: 1rem 1.1rem;
-  background: #fbfcfd;
-  border-left: 2px solid rgba(15, 118, 110, 0.28);
+  margin-top: 1.25rem;
+  padding: 1rem 1.05rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   color: var(--muted);
   font-size: 0.96rem;
+  box-shadow: var(--shadow);
 }
 
 .student-note p:last-child {
@@ -1232,6 +1252,7 @@ ol {
   }
 
   .hero-grid,
+  .students-layout,
   .contact-grid {
     grid-template-columns: 1fr;
   }
