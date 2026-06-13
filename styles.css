@@ -1148,21 +1148,6 @@ ol {
   color: var(--muted);
 }
 
-.student-contact-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  color: var(--navy);
-  font-size: 0.94rem;
-  font-weight: 600;
-}
-
-.student-contact-link:hover {
-  color: var(--teal);
-  text-decoration: underline;
-  text-underline-offset: 0.22em;
-}
-
 .student-note {
   margin-top: 1.25rem;
   padding: 1rem 1.05rem;
