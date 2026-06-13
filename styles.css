@@ -1118,16 +1118,21 @@ ol {
 }
 
 .students-section {
-  padding: 58px 0;
-  background: #fbfcfd;
+  padding: 44px 0 48px;
+  background: #f8fafb;
   border-block: 1px solid var(--line);
 }
 
 .students-layout {
   display: grid;
-  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: minmax(220px, 0.38fr) minmax(0, 1fr);
+  gap: 2.25rem;
   align-items: start;
+  padding: 1.65rem 1.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-left: 4px solid rgba(22, 126, 116, 0.5);
+  border-radius: var(--radius);
 }
 
 .students-heading h2 {
@@ -1138,6 +1143,7 @@ ol {
   max-width: 280px;
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 .students-copy {
@@ -1150,13 +1156,12 @@ ol {
 
 .student-note {
   margin-top: 1.25rem;
-  padding: 1rem 1.05rem;
-  background: var(--white);
-  border: 1px solid var(--line);
+  padding: 0.9rem 1rem;
+  background: #f6f9f8;
+  border: 1px solid rgba(22, 126, 116, 0.16);
   border-radius: var(--radius);
   color: var(--muted);
-  font-size: 0.96rem;
-  box-shadow: var(--shadow);
+  font-size: 0.95rem;
 }
 
 .student-note p:last-child {
@@ -1242,6 +1247,10 @@ ol {
     grid-template-columns: 1fr;
   }
 
+  .students-layout {
+    gap: 1.35rem;
+  }
+
   .research-theme-grid,
   .gallery-grid,
   .project-grid,
@@ -1257,6 +1266,15 @@ ol {
 
   .section {
     padding: 64px 0;
+  }
+
+  .students-section {
+    padding: 36px 0 40px;
+  }
+
+  .students-layout {
+    padding: 1.25rem 1.1rem;
+    border-left-width: 3px;
   }
 
   h1 {
