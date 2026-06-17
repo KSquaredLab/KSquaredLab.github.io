@@ -495,6 +495,7 @@ ol {
 .research-collaborations li {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 1.65rem;
   padding: 0.18rem 0.48rem;
   color: var(--muted);
@@ -503,6 +504,40 @@ ol {
   background: #f8fafb;
   border: 1px solid rgba(217, 222, 229, 0.85);
   border-radius: 4px;
+}
+
+.research-collaborations li.has-logo {
+  flex: 0 0 auto;
+  min-width: 5.4rem;
+  min-height: 2.15rem;
+  padding: 0.32rem 0.55rem;
+  background: var(--white);
+}
+
+.research-collaborations li.has-logo[data-logo-tone="dark"] {
+  background: var(--navy);
+  border-color: rgba(11, 31, 58, 0.22);
+}
+
+.research-collaborations li.has-logo[data-logo-size="wide"] {
+  min-width: 7rem;
+}
+
+.research-collaborations img {
+  display: block;
+  width: auto;
+  max-width: 9.5rem;
+  max-height: 1.55rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.research-collaborations li.has-logo[data-logo-tone="dark"] img {
+  max-height: 1.55rem;
+}
+
+.research-collaborations li.has-logo[data-logo-size="wide"] img {
+  max-height: 1.9rem;
 }
 
 .related-work {

@@ -2,13 +2,30 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-collab-institutions";
+const dataVersion = "20260618-collab-logos";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
   { key: "graduateStudents", title: "Graduate Students" },
   { key: "undergraduateResearchers", title: "Undergraduate Researchers" }
 ];
+
+const institutionLogos = {
+  "Harvard Medical School": {
+    src: "images/institutions/harvard-medical-school-logo.png",
+    alt: "Harvard Medical School",
+    tone: "dark"
+  },
+  "Brigham and Women's Hospital": {
+    src: "images/institutions/brigham-womens-hospital.svg",
+    alt: "Brigham and Women's Hospital",
+    size: "wide"
+  },
+  "University of British Columbia": {
+    src: "images/institutions/university-british-columbia-wordmark.png",
+    alt: "The University of British Columbia"
+  }
+};
 
 const createElement = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -275,7 +292,28 @@ const createCollaborations = (institutions = []) => {
 
   const list = createElement("ul", "");
   validInstitutions.forEach((institution) => {
-    list.appendChild(createElement("li", "", institution));
+    const logo = institutionLogos[institution];
+    const item = createElement("li", logo ? "has-logo" : "", logo ? "" : institution);
+
+    if (logo) {
+      item.setAttribute("aria-label", institution);
+      if (logo.tone) item.dataset.logoTone = logo.tone;
+      if (logo.size) item.dataset.logoSize = logo.size;
+
+      const image = document.createElement("img");
+      image.src = logo.src;
+      image.alt = logo.alt || institution;
+      image.loading = "lazy";
+      image.onerror = () => {
+        item.className = "";
+        item.removeAttribute("data-logo-tone");
+        item.removeAttribute("data-logo-size");
+        item.textContent = institution;
+      };
+      item.appendChild(image);
+    }
+
+    list.appendChild(item);
   });
 
   collaborations.appendChild(list);
