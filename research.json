@@ -10,6 +10,7 @@
     "alt": "Power curves from microbiome statistical method evaluation",
     "imageFit": "contain",
     "imagePosition": "center",
+    "representativeUrl": "https://pubmed.ncbi.nlm.nih.gov/40050732/",
     "relatedWork": [
       { "label": "TMAT" },
       { "label": "mTMAT" }
@@ -26,6 +27,7 @@
     "alt": "Omics analysis scatter plot from biomedical research",
     "imageFit": "contain",
     "imagePosition": "center",
+    "representativeUrl": "https://pubmed.ncbi.nlm.nih.gov/35931735/",
     "relatedWork": [
       { "label": "DNA methylation" },
       { "label": "Epigenetic aging" },
@@ -48,6 +50,7 @@
     "alt": "Cropped Fig. 2 regional GWAS panels from Genome Biology whole-genome sequence analysis of pulmonary function and COPD",
     "imageFit": "contain",
     "imagePosition": "center",
+    "representativeUrl": "https://pubmed.ncbi.nlm.nih.gov/41535900/",
     "relatedWork": [
       { "label": "Statistical genetics" },
       { "label": "Rare variant analysis" },
@@ -69,6 +72,7 @@
     "alt": "Chest CT examples of mucus plugs from COPD research",
     "imageFit": "cover",
     "imagePosition": "center",
+    "representativeUrl": "https://pubmed.ncbi.nlm.nih.gov/39572219/",
     "relatedWork": [
       { "label": "COPDGene" },
       { "label": "ECLIPSE" },
@@ -91,6 +95,7 @@
     "alt": "Cropped Fig. 5 Kaplan-Meier survival curves from a gut microbe-derived extracellular vesicle study",
     "imageFit": "contain",
     "imagePosition": "center",
+    "representativeUrl": "https://ieeexplore.ieee.org/document/10091554/",
     "relatedWork": [
       { "label": "Survival prediction" },
       { "label": "Autoencoder-based models" },
@@ -108,6 +113,7 @@
     "alt": "Network visualization used as a research thumbnail for environmental health data science",
     "imageFit": "contain",
     "imagePosition": "center",
+    "representativeUrl": "https://pubmed.ncbi.nlm.nih.gov/39470402/",
     "relatedWork": [
       {
         "label": "Smart safety equipment certification criteria project",

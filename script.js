@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-collab-logos";
+const dataVersion = "20260618-representative-links";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -320,8 +320,33 @@ const createCollaborations = (institutions = []) => {
   return collaborations;
 };
 
+const openExternalLink = (url) => {
+  const newWindow = window.open(url, "_blank", "noopener");
+  if (newWindow) newWindow.opener = null;
+};
+
 const createResearchCard = (theme) => {
   const card = createElement("article", "research-theme-card");
+  const representativeUrl = theme.representativeUrl;
+
+  if (representativeUrl) {
+    card.classList.add("is-clickable");
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    card.setAttribute("aria-label", `Open representative paper for ${theme.title || "this research theme"}`);
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) return;
+      openExternalLink(representativeUrl);
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      openExternalLink(representativeUrl);
+    });
+  }
+
   const media = createElement("div", "research-theme-media");
   const imageFit = theme.imageFit === "contain" ? "contain" : "cover";
   media.dataset.fit = imageFit;
