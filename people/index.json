@@ -20,7 +20,8 @@
       "key": "undergraduateResearchers",
       "title": "Undergraduate Researchers",
       "profiles": [
-        "people/seoyoung-bae/profile.json"
+        "people/seoyoung-bae/profile.json",
+        "people/na-yoon-kim/profile.json"
       ]
     }
   ]
