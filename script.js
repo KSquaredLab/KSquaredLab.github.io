@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-ubc-svg-logo";
+const dataVersion = "20260618-ubc-unclipped-logo";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -16,7 +16,7 @@ const institutionLogos = {
     alt: "Harvard Medical School"
   },
   "University of British Columbia": {
-    src: "images/institutions/university-british-columbia-wordmark.svg",
+    src: "images/institutions/university-british-columbia-wordmark-wide.svg",
     alt: "The University of British Columbia"
   }
 };
