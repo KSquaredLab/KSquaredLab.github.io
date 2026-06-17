@@ -514,21 +514,13 @@ ol {
   opacity: 0.92;
 }
 
-.research-collaborations li.has-logo[data-logo-size="wide"] {
-  min-width: 0;
-}
-
 .research-collaborations img {
   display: block;
   width: auto;
-  height: 1.45rem;
-  max-width: 10.75rem;
+  height: 2.1rem;
+  max-width: 17rem;
   flex: 0 0 auto;
   object-fit: contain;
-}
-
-.research-collaborations li.has-logo[data-logo-size="wide"] img {
-  height: 2rem;
 }
 
 .related-work {

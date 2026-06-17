@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-static-research-cards";
+const dataVersion = "20260618-hms-ubc-logos";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -14,11 +14,6 @@ const institutionLogos = {
   "Harvard Medical School": {
     src: "images/institutions/harvard-medical-school-wordmark.svg",
     alt: "Harvard Medical School"
-  },
-  "Brigham and Women's Hospital": {
-    src: "images/institutions/brigham-womens-hospital.svg",
-    alt: "Brigham and Women's Hospital",
-    size: "wide"
   },
   "University of British Columbia": {
     src: "images/institutions/university-british-columbia-wordmark.png",
@@ -297,7 +292,6 @@ const createCollaborations = (institutions = []) => {
     if (logo) {
       item.setAttribute("aria-label", institution);
       if (logo.tone) item.dataset.logoTone = logo.tone;
-      if (logo.size) item.dataset.logoSize = logo.size;
 
       const image = document.createElement("img");
       image.src = logo.src;
@@ -306,7 +300,6 @@ const createCollaborations = (institutions = []) => {
       image.onerror = () => {
         item.className = "";
         item.removeAttribute("data-logo-tone");
-        item.removeAttribute("data-logo-size");
         item.textContent = institution;
       };
       item.appendChild(image);
