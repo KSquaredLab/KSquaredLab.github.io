@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-na-yoon-kim";
+const dataVersion = "20260618-collab-institutions";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -266,6 +266,22 @@ const createRelatedWork = (items = []) => {
   return related;
 };
 
+const createCollaborations = (institutions = []) => {
+  const validInstitutions = institutions.filter(Boolean);
+  if (!validInstitutions.length) return null;
+
+  const collaborations = createElement("div", "research-collaborations");
+  collaborations.appendChild(createElement("h4", "", "Collaborative work with"));
+
+  const list = createElement("ul", "");
+  validInstitutions.forEach((institution) => {
+    list.appendChild(createElement("li", "", institution));
+  });
+
+  collaborations.appendChild(list);
+  return collaborations;
+};
+
 const createResearchCard = (theme) => {
   const card = createElement("article", "research-theme-card");
   const media = createElement("div", "research-theme-media");
@@ -305,6 +321,9 @@ const createResearchCard = (theme) => {
     .filter(Boolean)
     .slice(0, 3)
     .forEach((description) => body.appendChild(createElement("p", "", description)));
+
+  const collaborations = createCollaborations(theme.collaborations || []);
+  if (collaborations) body.appendChild(collaborations);
 
   const related = createRelatedWork(theme.relatedWork || []);
   if (related) body.appendChild(related);

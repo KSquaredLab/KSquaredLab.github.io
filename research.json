@@ -30,6 +30,10 @@
       { "label": "DNA methylation" },
       { "label": "Epigenetic aging" },
       { "label": "mLOY and respiratory disease" }
+    ],
+    "collaborations": [
+      "Harvard Medical School",
+      "University of Virginia"
     ]
   },
   {
@@ -47,6 +51,9 @@
       { "label": "Statistical genetics" },
       { "label": "Rare variant analysis" },
       { "label": "Whole-genome sequencing" }
+    ],
+    "collaborations": [
+      "Harvard Medical School"
     ]
   },
   {
@@ -64,6 +71,10 @@
       { "label": "COPDGene" },
       { "label": "ECLIPSE" },
       { "label": "Mucus plugging" }
+    ],
+    "collaborations": [
+      "Harvard Medical School",
+      "University of British Columbia"
     ]
   },
   {
@@ -100,6 +111,9 @@
         "url": "#projects"
       },
       { "label": "Environmental health data analysis" }
+    ],
+    "collaborations": [
+      "University of British Columbia"
     ]
   }
 ]

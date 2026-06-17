@@ -468,6 +468,43 @@ ol {
   font-size: 0.94rem;
 }
 
+.research-collaborations {
+  display: grid;
+  gap: 0.42rem;
+  padding-top: 0.15rem;
+}
+
+.research-collaborations h4 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.research-collaborations ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-collaborations li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.65rem;
+  padding: 0.18rem 0.48rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #f8fafb;
+  border: 1px solid rgba(217, 222, 229, 0.85);
+  border-radius: 4px;
+}
+
 .related-work {
   display: grid;
   gap: 0.5rem;
