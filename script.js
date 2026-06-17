@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-representative-links";
+const dataVersion = "20260618-clean-collab-logos";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -12,9 +12,8 @@ const defaultGroups = [
 
 const institutionLogos = {
   "Harvard Medical School": {
-    src: "images/institutions/harvard-medical-school-logo.png",
-    alt: "Harvard Medical School",
-    tone: "dark"
+    src: "images/institutions/harvard-medical-school-wordmark.svg",
+    alt: "Harvard Medical School"
   },
   "Brigham and Women's Hospital": {
     src: "images/institutions/brigham-womens-hospital.svg",

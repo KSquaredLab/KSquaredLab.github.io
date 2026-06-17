@@ -489,14 +489,14 @@ ol {
 
 .research-collaborations {
   display: grid;
-  gap: 0.42rem;
-  padding-top: 0.15rem;
+  gap: 0.35rem;
+  padding-top: 0.05rem;
 }
 
 .research-collaborations h4 {
   margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
@@ -505,7 +505,8 @@ ol {
 .research-collaborations ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.72rem 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -514,49 +515,39 @@ ol {
 .research-collaborations li {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 1.65rem;
-  padding: 0.18rem 0.48rem;
+  justify-content: flex-start;
+  min-height: 1.35rem;
+  padding: 0;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 600;
-  background: #f8fafb;
-  border: 1px solid rgba(217, 222, 229, 0.85);
-  border-radius: 4px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 .research-collaborations li.has-logo {
   flex: 0 0 auto;
-  min-width: 5.4rem;
-  min-height: 2.15rem;
-  padding: 0.32rem 0.55rem;
-  background: var(--white);
-}
-
-.research-collaborations li.has-logo[data-logo-tone="dark"] {
-  background: var(--navy);
-  border-color: rgba(11, 31, 58, 0.22);
+  min-width: 0;
+  min-height: 0;
+  opacity: 0.92;
 }
 
 .research-collaborations li.has-logo[data-logo-size="wide"] {
-  min-width: 7rem;
+  min-width: 0;
 }
 
 .research-collaborations img {
   display: block;
   width: auto;
-  max-width: 9.5rem;
-  max-height: 1.55rem;
+  height: 1.45rem;
+  max-width: 10.75rem;
   flex: 0 0 auto;
   object-fit: contain;
 }
 
-.research-collaborations li.has-logo[data-logo-tone="dark"] img {
-  max-height: 1.55rem;
-}
-
 .research-collaborations li.has-logo[data-logo-size="wide"] img {
-  max-height: 1.9rem;
+  height: 2rem;
 }
 
 .related-work {
