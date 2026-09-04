@@ -612,8 +612,7 @@ ol {
 }
 
 .project-group + .project-group {
-  padding-top: 0.2rem;
-  border-top: 1px solid rgba(214, 222, 232, 0.72);
+  padding-top: 0.65rem;
 }
 
 .project-group-student-awards .project-group-grid {
