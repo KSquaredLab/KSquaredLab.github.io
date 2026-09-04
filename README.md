@@ -101,8 +101,8 @@ To add a new project:
 
 1. Add a new object to `projects.json`.
 2. Include `title`, `fundingAgency`, `period`, `role`, and `description`.
-3. Add `category` to group the item, such as `PI-led Grants and Projects` or `Student Research Support`.
-4. Add `grantProgram`, `totalFunding`, `recipient`, and `koreanTitle` when useful and appropriate for public display.
+3. Add `category` to group the item, such as `PI-led Grants and Projects`, `Commissioned and Collaborative Funded Research`, or `Student Fellowships and Research Awards`.
+4. Add `grantProgram`, `totalFunding`, `recipient`, `awardType`, and `koreanTitle` when useful and appropriate for public display.
 5. Commit and push changes.
 6. Do not include private administrative details, internal screenshots, phone numbers, birth dates, student IDs, non-public budget details, or other sensitive information. Only include funding amounts when they are intended for public display.
 
@@ -116,7 +116,8 @@ Example entry:
   "fundingAgency": "Funding Agency",
   "grantProgram": "Grant Program Name",
   "period": "2026.03 – 2029.02",
-  "recipient": "Student name, if this is student research support",
+  "recipient": "Student name, if this is a student fellowship or award",
+  "awardType": "Competitive Graduate Research Fellowship, if this is a student award",
   "role": "Principal Investigator",
   "totalFunding": "Public funding amount, if appropriate",
   "description": "Short factual description of the funded work."

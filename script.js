@@ -2,7 +2,12 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260904-student-research-support";
+const dataVersion = "20260904-student-fellowships";
+const projectCategories = {
+  piLed: "PI-led Grants and Projects",
+  commissioned: "Commissioned and Collaborative Funded Research",
+  studentAwards: "Student Fellowships and Research Awards"
+};
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -696,8 +701,9 @@ document.addEventListener("keydown", (event) => {
 
 const createProjectCard = (project) => {
   const card = createElement("article", "project-card");
-  if (project.category === "Student Research Support") {
-    card.classList.add("project-card-student-support");
+  const isStudentAward = project.category === projectCategories.studentAwards;
+  if (isStudentAward) {
+    card.classList.add("project-card-student-award");
   }
 
   card.appendChild(createElement("h3", "", project.title || "Funded Project"));
@@ -707,14 +713,22 @@ const createProjectCard = (project) => {
   }
 
   const facts = createElement("dl", "project-facts");
-  [
-    ["Funding agency", project.fundingAgency],
-    ["Grant program", project.grantProgram || project.program],
-    ["Period", project.period],
-    ["Recipient", project.recipient],
-    ["Role", project.role],
-    ["Total funding", project.totalFunding]
-  ].forEach(([label, value]) => {
+  const factRows = isStudentAward
+    ? [
+        ["Recipient", project.recipient],
+        ["Award type", project.awardType],
+        ["Funding agency", project.fundingAgency],
+        ["Period", project.period]
+      ]
+    : [
+        ["Funding agency", project.fundingAgency],
+        ["Grant program", project.grantProgram || project.program],
+        ["Period", project.period],
+        ["Role", project.role],
+        ["Total funding", project.totalFunding]
+      ];
+
+  factRows.forEach(([label, value]) => {
     if (!value) return;
     const row = createElement("div", "project-fact-row");
     row.appendChild(createElement("dt", "", label));
@@ -733,7 +747,11 @@ const createProjectCard = (project) => {
   return card;
 };
 
-const projectCategoryOrder = ["PI-led Grants and Projects", "Student Research Support"];
+const projectCategoryOrder = [
+  projectCategories.piLed,
+  projectCategories.commissioned,
+  projectCategories.studentAwards
+];
 
 const renderProjects = (projects) => {
   const section = document.querySelector("#projects");
@@ -762,8 +780,8 @@ const renderProjects = (projects) => {
 
   orderedCategories.forEach((category) => {
     const group = createElement("section", "project-group");
-    if (category === "Student Research Support") {
-      group.classList.add("project-group-student-support");
+    if (category === projectCategories.studentAwards) {
+      group.classList.add("project-group-student-awards");
     }
 
     group.appendChild(createElement("h3", "project-group-heading", category));

@@ -611,7 +611,12 @@ ol {
   font-weight: 800;
 }
 
-.project-group-student-support .project-group-grid {
+.project-group + .project-group {
+  padding-top: 0.2rem;
+  border-top: 1px solid rgba(214, 222, 232, 0.72);
+}
+
+.project-group-student-awards .project-group-grid {
   grid-template-columns: minmax(0, 1fr);
 }
 
@@ -621,8 +626,10 @@ ol {
   padding: 1.25rem 1.35rem;
 }
 
-.project-card-student-support {
-  box-shadow: none;
+.project-card-student-award {
+  background: #fbfcfd;
+  border-left: 3px solid rgba(15, 118, 110, 0.45);
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.05);
 }
 
 .project-card h3 {
