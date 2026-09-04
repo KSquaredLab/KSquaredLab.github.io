@@ -2,10 +2,9 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260904-student-fellowships";
+const dataVersion = "20260904-balanced-funding";
 const projectCategories = {
   piLed: "PI-led Grants and Projects",
-  commissioned: "Commissioned and Collaborative Funded Research",
   studentAwards: "Student Fellowships and Research Awards"
 };
 
@@ -749,7 +748,6 @@ const createProjectCard = (project) => {
 
 const projectCategoryOrder = [
   projectCategories.piLed,
-  projectCategories.commissioned,
   projectCategories.studentAwards
 ];
 
