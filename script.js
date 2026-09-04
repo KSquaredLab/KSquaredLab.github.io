@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260618-ubc-unclipped-logo";
+const dataVersion = "20260904-student-research-support";
 
 const defaultGroups = [
   { key: "principalInvestigator", title: "Principal Investigator" },
@@ -696,6 +696,9 @@ document.addEventListener("keydown", (event) => {
 
 const createProjectCard = (project) => {
   const card = createElement("article", "project-card");
+  if (project.category === "Student Research Support") {
+    card.classList.add("project-card-student-support");
+  }
 
   card.appendChild(createElement("h3", "", project.title || "Funded Project"));
 
@@ -708,6 +711,7 @@ const createProjectCard = (project) => {
     ["Funding agency", project.fundingAgency],
     ["Grant program", project.grantProgram || project.program],
     ["Period", project.period],
+    ["Recipient", project.recipient],
     ["Role", project.role],
     ["Total funding", project.totalFunding]
   ].forEach(([label, value]) => {
@@ -729,6 +733,8 @@ const createProjectCard = (project) => {
   return card;
 };
 
+const projectCategoryOrder = ["PI-led Grants and Projects", "Student Research Support"];
+
 const renderProjects = (projects) => {
   const section = document.querySelector("#projects");
   const visibleProjects = Array.isArray(projects) ? projects.filter((project) => project && project.title) : [];
@@ -738,8 +744,35 @@ const renderProjects = (projects) => {
     return;
   }
 
+  if (section) section.hidden = false;
   projectsContainer.innerHTML = "";
-  visibleProjects.forEach((project) => projectsContainer.appendChild(createProjectCard(project)));
+  projectsContainer.className = "project-groups";
+
+  const groupedProjects = visibleProjects.reduce((groups, project) => {
+    const category = project.category || "Funded Projects";
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(project);
+    return groups;
+  }, new Map());
+
+  const orderedCategories = [
+    ...projectCategoryOrder.filter((category) => groupedProjects.has(category)),
+    ...[...groupedProjects.keys()].filter((category) => !projectCategoryOrder.includes(category))
+  ];
+
+  orderedCategories.forEach((category) => {
+    const group = createElement("section", "project-group");
+    if (category === "Student Research Support") {
+      group.classList.add("project-group-student-support");
+    }
+
+    group.appendChild(createElement("h3", "project-group-heading", category));
+
+    const grid = createElement("div", "project-grid project-group-grid");
+    groupedProjects.get(category).forEach((project) => grid.appendChild(createProjectCard(project)));
+    group.appendChild(grid);
+    projectsContainer.appendChild(group);
+  });
 };
 
 const renderProjectsError = () => {

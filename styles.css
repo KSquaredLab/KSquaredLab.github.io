@@ -593,10 +593,36 @@ ol {
   gap: 1rem;
 }
 
+.project-groups {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.project-group {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.project-group-heading {
+  margin: 0;
+  color: var(--navy);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.project-group-student-support .project-group-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .project-card {
   display: grid;
   gap: 0.8rem;
   padding: 1.25rem 1.35rem;
+}
+
+.project-card-student-support {
+  box-shadow: none;
 }
 
 .project-card h3 {
