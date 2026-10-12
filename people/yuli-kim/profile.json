@@ -1,0 +1,17 @@
+{
+  "name": "Yuli Kim",
+  "koreanName": "김율이",
+  "role": "Undergraduate Researcher",
+  "title": "",
+  "department": "Department of Applied Statistics, Gachon University · Double Major in Artificial Intelligence",
+  "email": "named0@gachon.ac.kr",
+  "photo": "people/yuli-kim/yuli-kim.png",
+  "researchInterests": [
+    "Statistical machine learning",
+    "Multi-omics data integration",
+    "Rigorous model validation",
+    "Proteogenomics",
+    "Breast cancer subtype classification"
+  ],
+  "bio": "She is currently examining whether RNA–protein expression discordance improves PAM50 breast cancer subtype classification beyond RNA alone, using the CPTAC breast cancer proteogenomic cohort and leakage-free nested cross-validation."
+}
