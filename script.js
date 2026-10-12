@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20260904-balanced-funding";
+const dataVersion = "20260904-fellowship-project-title";
 const projectCategories = {
   piLed: "PI-led Grants and Projects",
   studentAwards: "Student Fellowships and Research Awards"
@@ -709,6 +709,16 @@ const createProjectCard = (project) => {
 
   if (project.koreanTitle) {
     card.appendChild(createElement("p", "project-title-korean", project.koreanTitle));
+  }
+
+  if (isStudentAward && project.researchTitle) {
+    const research = createElement("div", "project-research");
+    research.appendChild(createElement("p", "project-research-label", "Research project"));
+    research.appendChild(createElement("p", "project-research-title", project.researchTitle));
+    if (project.researchTitleKorean) {
+      research.appendChild(createElement("p", "project-research-title-korean", project.researchTitleKorean));
+    }
+    card.appendChild(research);
   }
 
   const facts = createElement("dl", "project-facts");

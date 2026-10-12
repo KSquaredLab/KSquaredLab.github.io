@@ -23,6 +23,8 @@
     "category": "Student Fellowships and Research Awards",
     "title": "Master’s Student Research Fellowship in Science and Engineering",
     "koreanTitle": "2026년도 이공분야 학술연구지원사업 석사과정생 연구장려금 지원사업",
+    "researchTitle": "Development of PRISM-AE(Phylogeny-aware Representation learning for Integrated Survival modeling in the Microbiome data using an AutoEncoder) and Its Application to Survival Analysis",
+    "researchTitleKorean": "마이크로바이옴 데이터에서 오토인코더를 이용한 계통정보 반영 표현학습 기반 통합 생존모형(PRISM-AE)의 개발 및 생존분석에서의 적용",
     "recipient": "Jun-Jae Won",
     "awardType": "Competitive Graduate Research Fellowship",
     "fundingAgency": "National Research Foundation of Korea",

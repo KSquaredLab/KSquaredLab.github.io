@@ -646,6 +646,39 @@ ol {
   font-weight: 760;
 }
 
+.project-research {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-research-label,
+.project-research-title,
+.project-research-title-korean {
+  margin: 0;
+}
+
+.project-research-label {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.project-research-title {
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.project-research-title-korean {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .project-description {
   margin-bottom: 0;
   color: var(--muted);
