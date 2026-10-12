@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20261013-yuli-kim";
+const dataVersion = "20261013-yuli-photo-updated";
 const projectCategories = {
   piLed: "PI-led Grants and Projects",
   studentAwards: "Student Fellowships and Research Awards"
