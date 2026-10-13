@@ -2,7 +2,7 @@ const peopleContainer = document.querySelector("#people-content");
 const researchContainer = document.querySelector("#research-content");
 const galleryContainer = document.querySelector("#gallery-content");
 const projectsContainer = document.querySelector("#projects-content");
-const dataVersion = "20261013-yuli-photo-updated";
+const dataVersion = "20261013-photo-frame";
 const projectCategories = {
   piLed: "PI-led Grants and Projects",
   studentAwards: "Student Fellowships and Research Awards"
@@ -63,11 +63,13 @@ const createAvatar = (person) => {
     image.src = person.photo;
     image.alt = `${person.name} portrait`;
     image.loading = "lazy";
+    const frame = person.photoCrop ? createElement("div", "person-photo person-photo-frame") : null;
+    if (frame) frame.appendChild(image);
     image.onerror = () => {
       const placeholder = createElement("div", "person-placeholder", initialsFor(person.name));
-      image.replaceWith(placeholder);
+      (frame || image).replaceWith(placeholder);
     };
-    return image;
+    return frame || image;
   }
 
   return createElement("div", "person-placeholder", initialsFor(person.name));

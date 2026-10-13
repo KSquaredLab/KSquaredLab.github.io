@@ -841,6 +841,20 @@ ol {
   object-position: center top;
 }
 
+.person-photo-frame {
+  overflow: hidden;
+}
+
+.person-card-member .person-photo-frame > img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.03);
+}
+
 .person-placeholder {
   display: grid;
   place-items: center;
